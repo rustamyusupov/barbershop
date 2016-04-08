@@ -145,7 +145,7 @@ module.exports = function(grunt) {
     watch: {
       html: {
         files: ['src/**/*.html'],
-        tasks: ['htm'],
+        tasks: ['copy:htm'],
         options: {
           spawn: false,
           livereload: true
@@ -153,7 +153,7 @@ module.exports = function(grunt) {
       },
       style: {
         files: ['src/sass/**/*.scss'],
-        tasks: ['style'],
+        tasks: ['copy:style'],
         options: {
           spawn: false,
           livereload: true
@@ -161,7 +161,7 @@ module.exports = function(grunt) {
       },
       images: {
         files: ['src/img/**/*.{png,jpg,gif,svg}'],
-        tasks: ['img'],
+        tasks: ['copy:img'],
         options: {
           spawn: false,
           livereload: true
