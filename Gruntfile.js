@@ -61,6 +61,18 @@ module.exports = function(grunt) {
       }
     },
 
+    // сортировка css
+    csscomb: {
+      style: {
+        options: {
+          config: 'csscomb.json'
+        },
+        files: {
+          'build/css/style.css': ['build/css/style.css']
+        }
+      }
+    },
+
     // объединение медиа выражений
     cmq: {
       options: {
@@ -200,6 +212,7 @@ module.exports = function(grunt) {
     'sass',
     'cmq',
     'autoprefixer',
+    'csscomb',
     'cssmin',
     'concat',
     'uglify',
@@ -215,6 +228,7 @@ module.exports = function(grunt) {
     'sass',
     'cmq',
     'autoprefixer',
+    'csscomb',
     'cssmin',
     'concat',
     'uglify',
