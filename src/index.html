@@ -13,6 +13,8 @@
 
     <header class="header">
       <nav class="menu">
+        <div class="menu__toggle menu__toggle--opened">Открыть</div>
+
         <ul class="menu__list">
           <li class="menu__item"><a class="menu__link menu__link--active"></a>Главная</li>
           <li class="menu__item"><a href="photo.html" class="menu__link">Наши работы</a></li>
@@ -20,15 +22,15 @@
           <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
           <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a></li>
         </ul>
-      </nav>
 
-      <div class="user-block">
-        <a href="#" class="user-block__login">Вход</a> <!-- TODO: Подумать над классом -->
-      </div>
+        <div class="menu__user">
+          <a href="#" class="menu__login">Вход</a>
+        </div>
+      </nav>
 
       <div class="logo">
         <a class="logo__link">
-          <img class="logo__image" src="img/logotype-mobile.svg"  width="226" height="30" alt="Логотип Borodinski">
+          <img class="logo__image" src="img/logotype-mobile.svg" width="230" height="85" alt="Логотип Borodinski">
         </a>
       </div>
     </header>
@@ -36,7 +38,7 @@
 
     <section class="prices">
       <header class="prices__header">
-        <h2 class="prices__title">Стрижка у нас это выгодно!</h2>
+        <b class="prices__title">Стрижка у нас это выгодно!</b>
         <p class="prices__text">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
       </header>
 
@@ -72,19 +74,19 @@
 
       <div class="advantages__item">
         <img class="advantages__image" src="img/advantage-1-illustration.svg" width="95" height="94" alt="Быстро">
-        <h2 class="advantages__title">Быстро</h2>
+        <b class="advantages__title">Быстро</b>
         <p class="advantages__text">Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки.</p>
       </div>
 
       <div class="advantages__item">
         <img class="advantages__image" src="img/advantage-2-illustration.svg" width="95" height="98" alt="Круто">
-        <h2 class="advantages__title">Круто</h2>
+        <b class="advantages__title">Круто</b>
         <p class="advantages__text">Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино. Во всяком случае внешне.</p>
       </div>
 
       <div class="advantages__item">
         <img class="advantages__image" src="img/advantage-3-illustration.svg" width="95" height="91" alt="Дорого">
-        <h2 class="advantages__title">Дорого</h2>
+        <b class="advantages__title">Дорого</b>
         <p class="advantages__text">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
       </div>
 
@@ -121,35 +123,40 @@
     <section class="feedback">
       <h2 class="feedback__title">Отзывы о нас</h2>
 
-      <div class="feedback__item">
+      <div class="feedback__items">
         <input class="slider__selector" type="radio" name="feedback" id="feedback-1" checked>
         <input class="slider__selector" type="radio" name="feedback" id="feedback-2">
         <input class="slider__selector" type="radio" name="feedback" id="feedback-3">
 
-        <img class="feedback__image" src="img/travis.jpg" width="50" height="50" alt="Трэвис Баркер">
-        <h3 class="feedback__title">Трэвис Баркер</h3>
-        <p class="feedback__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
-      </div>
+        <div class="feedback__item">
+          <img class="feedback__image" src="img/travis.jpg" width="50" height="50" alt="Трэвис Баркер">
+          <b class="feedback__title">Трэвис Баркер</b>
+          <p class="feedback__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+        </div>
 
-      <div class="feedback__item">
-        <img class="feedback__image" src="" alt="">
-        <h3 class="feedback__title"></h3>
-        <p class="feedback__text"></p>
-      </div>
+        <div class="feedback__item">
+          <img class="feedback__image" src="img/travis.jpg" width="50" height="50" alt="Джон Смит">
+          <b class="feedback__title">Джон Смит</b>
+          <p class="feedback__text">Отличную стрижку мне сделали ребята.</p>
+        </div>
 
-      <div class="feedback__item">
-        <img class="feedback__image" src="" alt="">
-        <h3 class="feedback__title"></h3>
-        <p class="feedback__text"></p>
+        <div class="feedback__item">
+          <img class="feedback__image" src="img/travis.jpg" width="50" height="50" alt="Иван Бородайло">
+          <b class="feedback__title">Иван Бородайло</b>
+          <p class="feedback__text">В Бородинском ваша борода в надёжных руках!</p>
+        </div>
+
+        <button class="feedback__toggle feedback__toggle--prev"  type="button">Предыдущий</button>
+        <button class="feedback__toggle feedback__toggle--next"  type="button">Следующий</button>
+
+        <div class="slider">
+          <label class="slider__btn" for="feedback-1"></label>
+          <label class="slider__btn" for="feedback-2"></label>
+          <label class="slider__btn" for="feedback-3"></label>
+        </div>
       </div>
 
       <a class="btn" href="#">Оставить свой</a>
-
-      <div class="slider">
-        <label class="slider__btn" for="feedback-1"></label>
-        <label class="slider__btn" for="feedback-2"></label>
-        <label class="slider__btn" for="feedback-3"></label>
-      </div>
     </section>
 
 
