@@ -116,6 +116,30 @@
     </section>
 
 
+    <div class="modal-personal">
+      <header class="modal-personal__header">
+        <b class="modal-personal__title">Личный кабинет</b>
+        <p class="modal-personal__text">Введите свой логин и пароль, чтобы войти</p>
+      </header>
+
+      <form class="modal-login" action="#" method="post">
+        <div class="modal-login__user">
+          <input type="text" class="modal-login__user-login" placeholder="Логин">
+          <input type="text" class="modal-login__user-password" placeholder="Пароль">
+        </div>
+
+        <div class="modal-login__settings">
+          <input class="modal-login__field" type="checkbox" name="remember" id="remember">
+          <label class="modal-login__caption" for="remember">Запомните меня</label>
+          <a class="modal-login__foggot" href="#">Я забыл пароль</a>
+        </div>
+
+        <button class="btn btn--submit" type="submit">Войти</button>
+        <button class="btn" type="button">Закрыть</button>
+      </form>
+    </div>
+
+
     <footer class="footer">
       <section class="contacts">
         <b class="contacts__title">Барбершоп Бородинский</b>
