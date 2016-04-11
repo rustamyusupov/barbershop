@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Borodinski: записаться</title>
+  <!-- build:css css/style.min.css -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- /build -->
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header class="header">
+      <nav class="menu">
+        <div class="menu__toggle">Открыть</div>
+
+        <ul class="menu__list">
+          <li class="menu__item"><a href="index.html"class="menu__link">Главная</a></li>
+          <li class="menu__item"><a href="photo.html" class="menu__link">Наши работы</a></li>
+          <li class="menu__item menu__link--active"><a class="menu__link">Записаться</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a></li>
+        </ul>
+
+        <div class="menu__user">
+          <a href="#" class="menu__login">Вход</a>
+        </div>
+      </nav>
+
+      <div class="logo">
+        <a class="logo__link">
+          <img class="logo__image" src="img/logotype-mobile.svg" width="230" height="85" alt="Логотип Borodinski">
+        </a>
+      </div>
+    </header>
+
+    <section class="order-to-section">
+      <header class="order-to-section__header">
+        <h1 class="order-to-section__title">Запись на стрижку</h1>
+        <a class="btn btn--to-main" href="index.html">На главную</a>
+      </header>
+
+      <form class="order-to" action="#" method="post">
+        <div class="order-to__contacts">
+          <div class="order-to__name">
+            <input class="order-to__field" type="text" name="lastname" id="" placeholder="Фамилия">
+            <input class="order-to__field" type="text" name="name" id="" placeholder="Имя">
+            <input class="order-to__field" type="text" name="patronymic" id="" placeholder="Отчество">
+          </div>
+          <div class="order-to__communications">
+            <input class="order-to__field" type="tel" name="phone" id="" placeholder="Контактный телефон">
+            <input class="order-to__field" type="email" name="email" id="" placeholder="Контактный e-mail">
+          </div>
+          <textarea class="order-to__for-master" name="for-master" id="" placeholder="Доп. информация для мастера"></textarea>
+        </div>
+
+        <div class="order-to__model">
+          <b class="order-to__title">Выберите модель бороды:</b>
+          <ul class="order-to__list">
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="radio" name="model" id="admiral" checked>
+              <label class="order-to__caption" for="admiral">адмирал</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="radio" name="model" id="woodman">
+              <label class="order-to__caption" for="woodman">лесоруб</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="radio" name="model" id="polar">
+              <label class="order-to__caption" for="polar">полярник</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="radio" name="model" id="boyar">
+              <label class="order-to__caption" for="boyar">боярин</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="radio" name="model" id="sage">
+              <label class="order-to__caption" for="sage">мудрец</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="order-to__additional">
+          <b class="order-to__title">Дополнительные услуги:</b>
+          <ul class="order-to__list">
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="checkbox" name="additional" id="paint-beard" checked>
+              <label class="order-to__caption" for="paint-beard">Подкрасить бороду</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="checkbox" name="additional" id="twirl-mustache" checked>
+              <label class="order-to__caption" for="twirl-mustache">Накрутить усы</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="checkbox" name="additional" id="comb-beard">
+              <label class="order-to__caption" for="comb-beard">Причесать бороду</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="checkbox" name="additional" id="align-temple">
+              <label class="order-to__caption" for="align-temple">Подровнять виски</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="checkbox" name="additional" id="remove-gray">
+              <label class="order-to__caption" for="remove-gray">Убрать седину</label>
+            </li>
+            <li class="order-to__list-item">
+              <input class="order-to__field" type="checkbox" name="additional" id="polished-bald">
+              <label class="order-to__caption" for="polished-bald">Отполировать лысину</label>
+            </li>
+        </div>
+
+        <button class="btn btn--submit" type="submit">Отправить заявку</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <section class="contacts">
+        <b class="contacts__title">Барбершоп Бородинский</b>
+        <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+        <a class="contacts__tel" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </section>
+
+      <section class="social">
+        <a class="social-btn social-btn--vk" href="#">VK
+          <img class="social-btn__icon" src="img/vk-icon-big.png" width="23" height="26" alt="VK">
+        </a>
+
+        <a class="social-btn social-btn--fb" href="#">Facebook
+          <img class="social-btn__icon" src="img/facebook-icon-big.png" width="18" height="39" alt="Facebook">
+        </a>
+
+        <a class="social-btn social-btn--ig" href="#">Instagram
+          <img class="social-btn__icon" src="img/insta-icon-big.png" width="36" height="36" alt="Instagram">
+        </a>
+      </section>
+
+      <section class="copyright">
+        <p class="copyright__title">Разработано:</p>
+        <a class="btn btn--copyright" href="#">HTML Academy</a>
+      </section>
+    </footer>
+
+  </div>
+
+  <!-- build:js js/script.min.js -->
+  <script src="js/script.js"></script>
+  <!-- /build -->
+
+</body>
+</html>
