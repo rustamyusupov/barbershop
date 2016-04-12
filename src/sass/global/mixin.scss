@@ -8,4 +8,19 @@
   &:after {
     clear: both;
   }
+
+}
+
+@mixin container {
+  margin: 0 auto;
+  width: 280px;
+
+  @media #{$break-medium} {
+    width: 648px;
+  }
+
+  @media #{$break-large} {
+    width: 960px;
+  }
+
 }

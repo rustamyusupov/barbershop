@@ -1,4 +1,53 @@
 .menu {
 
   outline: 1px dashed red;
+
+  &__toggle {
+    display: none;
+
+    &--opened {
+      display: block;
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    outline: 1px dashed blue;
+  }
+
+  &__item {
+
+  }
+
+  &__user {
+    outline: 1px dashed blue;
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .menu {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    min-height: 74px;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      flex-direction: row;
+    }
+
+  }
+
 }

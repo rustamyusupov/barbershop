@@ -1,4 +1,18 @@
 .footer {
+  @include container;
 
   outline: 1px dashed red;
+}
+
+@media #{$break-medium} {
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media #{$break-large} {
+
 }

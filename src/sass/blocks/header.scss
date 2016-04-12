@@ -1,4 +1,23 @@
 .header {
+  min-height: 135px;
 
   outline: 1px dashed red;
+}
+
+@media #{$break-medium} {
+
+  .header {
+    min-height: 470px;
+    padding: 0;
+    position: relative;
+  }
+
+}
+
+@media #{$break-large} {
+
+  .header {
+    min-height: 719px;
+  }
+
 }

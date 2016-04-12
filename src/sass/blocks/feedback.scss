@@ -1,4 +1,66 @@
 .feedback {
+  @include container;
+
+  padding-bottom: 60px;
+  padding-top: 30px;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &:nth-of-type(n+2) {
+      display: none;
+    }
+
+  }
+
+  &__toggle {
+    display: none;
+  }
 
   outline: 1px dashed red;
+}
+
+@media #{$break-medium} {
+
+  .feedback {
+    padding-bottom: 70px;
+    padding-top: 30px;
+    position: relative;
+
+    &__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__toggle {
+      display: block;
+      width: 10%;
+
+      &--prev {
+        order: -1;
+      }
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .feedback {
+    padding-bottom: 100px;
+
+    &__item {
+      width: 90%;
+    }
+
+    &__toggle {
+      width: 5%;
+    }
+
+  }
+
 }

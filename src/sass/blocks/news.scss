@@ -1,9 +1,65 @@
 .news {
+  @include container;
+
+  padding-top: 75px;
 
   outline: 1px dashed red;
 
   &__item {
+    display: flex;
+
     outline: 1px dashed blue;
+
+    &:nth-of-type(n+3) {
+      display: none;
+    }
+
+  }
+
+  &__date {
+    width: 25%;
+  }
+
+  &__text {
+    width: 75%;
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .news  {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 95px;
+
+    &__item {
+      width: 50%;
+    }
+
+    &__title {
+      width: 100%;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .news  {
+    padding-top: 125px;
+
+    &__item {
+      width: 33.3333%;
+
+      &:nth-of-type(n+3) {
+        display: flex;
+      }
+
+    }
+
   }
 
 }
