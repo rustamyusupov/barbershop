@@ -10,6 +10,11 @@
     min-height: 470px;
     padding: 0;
     position: relative;
+
+    &--inner-page {
+      min-height: 250px;
+    }
+
   }
 
 }
@@ -18,6 +23,11 @@
 
   .header {
     min-height: 719px;
+
+    &--inner-page {
+      min-height: 320px;
+    }
+
   }
 
 }

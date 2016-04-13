@@ -1,9 +1,104 @@
 .portfolio {
+  @include container;
 
   outline: 1px dashed red;
 
   &__item {
+    margin-bottom: 20px;
+
     outline: 1px dashed blue;
+  }
+
+  &__item-description {
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+  }
+
+  &__item-services {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+    padding-left: 20px;
+  }
+
+  &__item-service {
+    align-items: center;
+    display: flex;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 30px;
+  }
+
+  &__item-icon {
+    padding-right: 15px;
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .portfolio {
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      // display: flex;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      // height: 176px;
+      //
+      // &--month {
+      //   height: 480px;
+      // }
+
+    }
+
+    &__item-photo {
+      // flex: 2 0 100%;
+      //width: 280px;
+    }
+
+    &__item-description {
+      // flex: 1 0 auto;
+      // //height: 30px;
+      // width: 60%;
+      // padding: 0;
+    }
+
+    &__item-services {
+      // flex: 1 0 25%;
+      // width: 60%;
+      // padding: 0;
+    }
+
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .portfolio {
+
+    &__items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex: 1 0 33.3333%;
+
+      &--month {
+        flex: 0 2 100%;
+      }
+    }
+
   }
 
 }

@@ -1,0 +1,27 @@
+.btn {
+
+  &--to-main {
+    display: none;
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .btn {
+
+    &--to-main {
+      display: block;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .btn {
+
+  }
+
+}

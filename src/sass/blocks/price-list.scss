@@ -1,4 +1,38 @@
 .price-list  {
+  @include container;
 
   outline: 1px dashed red;
+
+  &__table {
+    width: 100%;
+  }
+
+  &__discount {
+    display: flex;
+  }
+
+}
+
+@media #{$break-large} {
+
+  .price-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+      width: 100%;
+    }
+
+    &__table {
+      width: 80%;
+    }
+
+    &__discount {
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+    }
+
+  }
+
 }
