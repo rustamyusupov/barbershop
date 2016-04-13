@@ -1,15 +1,162 @@
 .order-form {
 
   &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
     outline: 1px dashed blue;
   }
 
+  &__name {
+    margin-bottom: 20px;
+  }
+
+  &__communications {
+    margin-bottom: 20px;
+  }
+
+  &__for-master {
+    height: 100px;
+  }
+
   &__model {
+    display: flex;
+    flex-wrap: wrap;
+
     outline: 1px dashed blue;
   }
 
   &__additional {
     outline: 1px dashed blue;
+  }
+
+  &__title {
+    width: 100%;
+  }
+
+  &__field {
+
+    &--name {
+      margin-bottom: 10px;
+    }
+
+    &--communications {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+
+    &--additional {
+      flex-direction: column;
+    }
+
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &--additional {
+      //margin: 0;
+      //width: 50%;
+    }
+
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .order-form {
+
+    &__name {
+      display: flex;
+      width: 100%;
+    }
+
+    &__communications {
+      margin: 0;
+      width: 100%;
+    }
+
+    &__field {
+
+      &--name {
+        margin: 0;
+        width: 33.3333%;
+      }
+
+      &--communications {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+    }
+
+    &__list {
+      display: flex; // TODO: Почему не выравнивает по ширине?
+      flex-direction: row;
+      justify-content: space-between;
+
+      &--additional {
+        flex-wrap: wrap; // TODO: Проблемы с выравниванием?
+        justify-content: flex-start;
+        //margin: 0;
+        //width: 50%;
+      }
+
+    }
+
+    &__list-item {
+      margin: 0;
+
+      &--additional {
+        margin: 0;
+        width: 50%;
+      }
+
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .order-form {
+
+    &__name {
+
+    }
+    // TODO: Отступы между элементами?
+    &__communications {
+      display: flex;
+    }
+
+    &__field {
+
+      &--name {
+        padding-right: 30px;
+      }
+
+      &--communications {
+
+      }
+
+    }
+
   }
 
 }

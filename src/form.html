@@ -32,7 +32,7 @@
 
   <div class="wrapper">
 
-    <header class="header">
+    <header class="header header--inner-page">
       <nav class="menu">
         <div class="menu__toggle">Открыть</div>
 
@@ -58,7 +58,7 @@
 
 
     <section class="order">
-      <header class="order__header">
+      <header class="order__header"> <!-- TODO: может сделать общий блок? -->
         <h1 class="order__title">Запись на стрижку</h1>
         <a class="btn btn--to-main" href="index.html">На главную</a>
       </header>
@@ -66,13 +66,13 @@
       <form class="order-form" action="#" method="post">
         <div class="order-form__contacts">
           <div class="order-form__name">
-            <input class="order-form__field" type="text" name="lastname" id="" placeholder="Фамилия">
-            <input class="order-form__field" type="text" name="name" id="" placeholder="Имя">
-            <input class="order-form__field" type="text" name="patronymic" id="" placeholder="Отчество">
+            <input class="order-form__field order-form__field--name" type="text" name="lastname" id="" placeholder="Фамилия">
+            <input class="order-form__field order-form__field--name" type="text" name="name" id="" placeholder="Имя">
+            <input class="order-form__field order-form__field--name" type="text" name="patronymic" id="" placeholder="Отчество">
           </div>
           <div class="order-form__communications">
-            <input class="order-form__field" type="tel" name="phone" id="" placeholder="Контактный телефон">
-            <input class="order-form__field" type="email" name="email" id="" placeholder="Контактный e-mail">
+            <input class="order-form__field order-form__field--communications" type="tel" name="phone" id="" placeholder="Контактный телефон">
+            <input class="order-form__field order-form__field--communications" type="email" name="email" id="" placeholder="Контактный e-mail">
           </div>
           <textarea class="order-form__for-master" name="for-master" id="" placeholder="Доп. информация для мастера"></textarea>
         </div>
@@ -110,8 +110,8 @@
 
         <div class="order-form__additional">
           <b class="order-form__title">Дополнительные услуги:</b>
-          <ul class="order-form__list">
-            <li class="order-form__list-item">
+          <ul class="order-form__list order-form__list--additional">
+            <li class="order-form__list-item order-form__list-item--additional">
               <input class="order-form__field" type="checkbox" name="additional" id="paint-beard" checked>
               <label class="order-form__caption" for="paint-beard">Подкрасить бороду</label>
             </li>

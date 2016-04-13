@@ -1,4 +1,18 @@
-.order-to-section {
+.order {
+  @include container;
 
   outline: 1px dashed red;
+}
+
+@media #{$break-medium} {
+
+  .order {
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
 }
