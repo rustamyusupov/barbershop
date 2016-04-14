@@ -1,6 +1,10 @@
 .order {
   @include container;
 
+  &__title {
+    text-align: center;
+  }
+
   outline: 1px dashed red;
 }
 

@@ -1,4 +1,5 @@
 .order-form {
+  text-align: center;
 
   &__contacts {
     display: flex;
@@ -21,18 +22,15 @@
   }
 
   &__model {
-    display: flex;
-    flex-wrap: wrap;
+    text-align: center;
 
     outline: 1px dashed blue;
   }
 
   &__additional {
-    outline: 1px dashed blue;
-  }
+    text-align: center;
 
-  &__title {
-    width: 100%;
+    outline: 1px dashed blue;
   }
 
   &__field {
@@ -55,22 +53,24 @@
 
     &--additional {
       flex-direction: column;
+      padding-left: 70px;
+      text-align: left;
     }
 
   }
 
   &__list-item {
+    align-items: space-between;
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
 
-    &:nth-child(3n) {
-      margin-right: 0;
+    &--model {
+      padding-left: 25px;
+      padding-top: 70px;
     }
 
     &--additional {
-      //margin: 0;
-      //width: 50%;
+      padding-bottom: 30px;
     }
 
   }
@@ -106,15 +106,13 @@
     }
 
     &__list {
-      display: flex; // TODO: Почему не выравнивает по ширине?
+      display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
 
       &--additional {
-        flex-wrap: wrap; // TODO: Проблемы с выравниванием?
+        flex-wrap: wrap;
         justify-content: flex-start;
-        //margin: 0;
-        //width: 50%;
       }
 
     }
@@ -137,10 +135,6 @@
 
   .order-form {
 
-    &__name {
-
-    }
-    // TODO: Отступы между элементами?
     &__communications {
       display: flex;
     }

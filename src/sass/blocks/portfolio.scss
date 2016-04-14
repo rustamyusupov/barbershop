@@ -3,6 +3,10 @@
 
   outline: 1px dashed red;
 
+  &__title {
+    text-align: center;
+  }
+
   &__item {
     margin-bottom: 20px;
 
@@ -47,35 +51,21 @@
     }
 
     &__item {
-      // display: flex;
-      // flex-direction: row;
-      // flex-wrap: wrap;
-      // height: 176px;
-      //
-      // &--month {
-      //   height: 480px;
-      // }
-
+      @include clearfix;
     }
 
     &__item-photo {
-      // flex: 2 0 100%;
-      //width: 280px;
+      float: left;
     }
 
     &__item-description {
-      // flex: 1 0 auto;
-      // //height: 30px;
-      // width: 60%;
-      // padding: 0;
+      display: block;
+      padding-left: 320px;
     }
 
     &__item-services {
-      // flex: 1 0 25%;
-      // width: 60%;
-      // padding: 0;
+      padding-left: 35px;
     }
-
 
   }
 
@@ -92,11 +82,21 @@
     }
 
     &__item {
+      float: none;
       flex: 1 0 33.3333%;
 
       &--month {
         flex: 0 2 100%;
       }
+    }
+
+    &__item-description {
+      padding-left: 20px;
+      padding-top: 200px;
+    }
+
+    &__item-services {
+      padding-left: 20px;
     }
 
   }

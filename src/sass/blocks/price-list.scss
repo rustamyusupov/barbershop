@@ -9,6 +9,24 @@
 
   &__discount {
     display: flex;
+    justify-content: space-around;
+  }
+
+  &__discount-text {
+    width: 50%;
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .price-list {
+
+    &__discount {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+
   }
 
 }
@@ -24,13 +42,15 @@
     }
 
     &__table {
-      width: 80%;
+      width: 75%;
     }
 
     &__discount {
+      align-items: center;
       display: flex;
       flex-direction: column;
-      width: 20%;
+      text-align: center;
+      width: 25%;
     }
 
   }
