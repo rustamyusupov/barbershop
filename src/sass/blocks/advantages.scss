@@ -8,19 +8,43 @@
 
   &__item {
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1 100%;
     padding-bottom: 50px;
     padding-left: 25px;
     padding-right: 25px;
-    padding-top: 80px;
+    padding-top: 130px;
+    position: relative;
     text-align: center;
 
     outline: 1px dashed blue;
 
     &:nth-of-type(n+2) {
       display: none;
+    }
+
+    &::before {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 95px auto;
+      content: "";
+      height: 95px;
+      right: 50%;
+      position: absolute;
+      top: 0;
+      transform: translateX(50%);
+      width: 95px;
+
+    }
+
+    &--fast::before {
+      background-image: url("../img/advantage-1-illustration.svg");
+    }
+
+    &--cool::before {
+      background-image: url("../img/advantage-2-illustration.svg");
+    }
+
+    &--expensive::before {
+      background-image: url("../img/advantage-3-illustration.svg");
     }
 
   }
@@ -33,30 +57,21 @@
 
     &__item {
       padding-bottom: 45px;
-      padding-left: 35px;
+      padding-left: 150px;
       padding-right: 35px;
       padding-top: 45px;
-      display:flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      text-align: left;
 
       &:nth-of-type(n+2) {
-        display: flex;
+        display: block;
       }
 
-    }
+      &::before {
+        left: 20px;
+        bottom: 50%;
+        transform: translateY(50%);
+      }
 
-    &__image {
-      flex-grow: 0;
-      flex-shrink: 2;
-      flex-basis: 100%;
-    }
-
-    &__title,
-    &__text {
-      flex-grow: 1;
-      flex-shrink: 0;
-      flex-basis: auto;
     }
 
   }
@@ -72,7 +87,16 @@
       padding-bottom: 40px;
       padding-left: 45px;
       padding-right: 45px;
-      padding-top: 80px;
+      padding-top: 120px;
+      text-align: center;
+
+      &::before {
+        left: unset;
+        right: 50%;
+        transform: translateX(50%);
+        top: 0;
+      }
+
     }
 
   }
