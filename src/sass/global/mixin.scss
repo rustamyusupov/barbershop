@@ -16,11 +16,18 @@
   width: 280px;
 
   @media #{$break-medium} {
-    width: 648px;
+    width: 640px;
   }
 
   @media #{$break-large} {
     width: 960px;
   }
 
+}
+
+@mixin title {
+  font-size: $font-size-big;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
 }

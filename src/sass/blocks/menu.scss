@@ -3,7 +3,7 @@
   width: 320px;
 
   &__toggle {
-    background-color: $bg-menu-mobile-login;
+    background-color: $bg-menu-login;
     cursor: pointer;
     display: block;
     font-size: 0;
@@ -53,15 +53,13 @@
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   &__item {
-    background-color: $bg-menu-mobile;
+    background-color: $bg-menu-active;
     font-weight: bold;
     line-height: $line-height-small;
   }
@@ -127,7 +125,7 @@
     }
 
     &__wrapper--opened {
-      background-color: $bg-menu-mobile-login;
+      background-color: $bg-menu-login;
       height: 100vh;
       left: 70px;
       position: absolute;
@@ -157,16 +155,62 @@
   .menu {
     @include container;
 
-    display: flex;
-    justify-content: space-between;
+    background-color: $bg-menu;
     min-height: 74px;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
 
     &__toggle {
       display: none;
     }
 
     &__list {
+      display: flex;
       flex-direction: row;
+    }
+
+    &__item {
+      background-color: $bg-menu;
+      margin-right: 33px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+    &__link {
+      border: none;
+      color: $color-white;
+      display: block;
+      padding: 24px 0;
+      padding-bottom: 25px;
+      position: relative;
+      //padding-bottom: 13px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &--active::after {
+        border-bottom: 3px solid $bg-menu-active;
+        bottom: 0;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        right: 0;
+      }
+
+    }
+
+    &__login {
+      font-size: 0;
+
+      &::before {
+        top: 29px;
+      }
     }
 
   }

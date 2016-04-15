@@ -1,14 +1,25 @@
 .prices {
 
-  //outline: 1px dashed red;
-
   &__header {
     background-color: $bg-main-header;
-    padding-bottom: 30px;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-top: 25px;
+    padding: 0 30px;
+    padding-bottom: 26px;
+    padding-top: 27px;
     text-align: center;
+  }
+
+  &__title {
+    @include title;
+
+    display: block;
+    line-height: $line-height-medium;
+    margin-bottom: 16px;
+    padding: 0 20px;
+  }
+
+  &__text {
+    font-size: $font-size-medium;
+    margin: 0;
   }
 
   &__list {

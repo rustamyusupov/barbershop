@@ -21,9 +21,12 @@
 }
 
 $base-font: PT Sans Narrow, Arial, sans-serif;
+$font-size-medium: 20px;
+$font-size-big: 30px;
 
 $line-height-base: 27px;
 $line-height-small: 24px;
+$line-height-medium: 30px;
 
 body {
   font-family: $base-font;
