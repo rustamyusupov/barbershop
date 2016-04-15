@@ -1,21 +1,34 @@
 .logo {
-  text-align: center;
+  position: absolute;
+  right: 50%;
+  top: -6px;
+  transform: translateX(50%);
+  z-index: -1;;
+
+  &__moustache,
+  &__barbershop {
+    opacity: 0;
+    transition: opacity .3s
+  }
 
   &__image {
-    height: 85px;
+    height: 100px;
     width: 226px;
   }
 
-  outline: 1px dashed red;
 }
 
 @media #{$break-medium} {
 
   .logo {
-    position: absolute;
-    right: 50%;
-    top: 75px;
-    transform: translateX(50%);
+    position: relative;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+
+    &__barbershop {
+      opacity: 1;
+    }
 
     &__image {
       height: 100px;
@@ -26,10 +39,13 @@
 
 }
 
-@media #{$break-medium} {
+@media #{$break-large} {
 
   .logo {
-    top: 75px;
+
+    &__moustache {
+      opacity: 1;
+    }
 
     &__image {
       height: 153px;

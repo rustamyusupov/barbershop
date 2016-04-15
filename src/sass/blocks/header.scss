@@ -1,7 +1,6 @@
 .header {
-  min-height: 135px;
-
-  outline: 1px dashed red;
+  padding-top: 85px;
+  position: relative;
 }
 
 @media #{$break-medium} {
