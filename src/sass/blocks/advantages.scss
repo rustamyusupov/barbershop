@@ -1,21 +1,40 @@
 .advantages  {
-  @include container;
-
   display: flex;
   flex-direction: column;
+  position: relative;
 
-  outline: 1px dashed red;
+  &::after {
+    content: "";
+    background-image:
+      linear-gradient(
+        to top right,
+        transparent 50%,
+        $bg-color 50%
+      ),
+      linear-gradient(
+        to top left,
+        transparent 50%,
+        $bg-color 50%
+      );
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    z-index: 10;
+  }
 
   &__item {
     align-items: center;
-    padding-bottom: 50px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 130px;
+    color: $color-white;
+    padding: 0 40px;
+    padding-bottom: 23px;
+    padding-top: 212px;
     position: relative;
     text-align: center;
-
-    outline: 1px dashed blue;
 
     &:nth-of-type(n+2) {
       display: none;
@@ -29,7 +48,7 @@
       height: 95px;
       right: 50%;
       position: absolute;
-      top: 0;
+      top: 87px;
       transform: translateX(50%);
       width: 95px;
 
@@ -37,14 +56,54 @@
 
     &--fast::before {
       background-image: url("../img/advantage-1-illustration.svg");
+      height: 95px;
+      width: 95px;
     }
 
     &--cool::before {
       background-image: url("../img/advantage-2-illustration.svg");
+      height: 95px;
+      width: 95px;
     }
 
     &--expensive::before {
       background-image: url("../img/advantage-3-illustration.svg");
+      height: 95px;
+      width: 95px;
+    }
+
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+}
+
+@media #{$break-small} {
+
+  .advantages  {
+
+    .advantages__item {
+      display: none;
+    }
+
+    #advantages-1:checked ~ .advantages__item--fast,
+    #advantages-2:checked ~ .advantages__item--cool,
+    #advantages-3:checked ~ .advantages__item--expensive {
+      display: block;
+    }
+
+    #advantages-1:checked ~ .slider label[for="advantages-1"],
+    #advantages-2:checked ~ .slider label[for="advantages-2"],
+    #advantages-3:checked ~ .slider label[for="advantages-3"] {
+      background-color: $color-white;
     }
 
   }
@@ -54,12 +113,19 @@
 @media #{$break-medium} {
 
   .advantages  {
+    padding: 0 64px;
+    padding-bottom: 7px;
+
+    &::after {
+      bottom: -41px;
+      height: 41px;
+    }
 
     &__item {
-      padding-bottom: 45px;
-      padding-left: 150px;
-      padding-right: 35px;
-      padding-top: 45px;
+      padding-bottom: 36px;
+      padding-left: 159px;
+      padding-right: 30px;
+      padding-top: 36px;
       text-align: left;
 
       &:nth-of-type(n+2) {
@@ -67,12 +133,35 @@
       }
 
       &::before {
-        left: 20px;
-        bottom: 50%;
-        transform: translateY(50%);
+        left: 31px;
+        top: 45px;
+        transform: none;
+      }
+
+      &::after {
+        border-bottom: 1px solid $color-border-advantages;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        right: 50%;
+        position: absolute;
+        transform: translateX(50%);
+        width: 89%;
+      }
+
+      &:nth-of-type(3)::after {
+        border: none;
       }
 
     }
+
+    &__title {
+      font-size: $font-size-big;
+      line-height: 42.33px;
+      margin-bottom: 9px;
+    }
+
+
 
   }
 
@@ -82,19 +171,38 @@
 
   .advantages  {
     flex-direction: row;
+    justify-content: center;
+    padding: 0 120px;
+    padding-top: 78px;
+
+    &::after {
+      bottom: -62px;
+      height: 62px;
+    }
 
     &__item {
+      padding: 0 40px;
       padding-bottom: 40px;
-      padding-left: 45px;
-      padding-right: 45px;
       padding-top: 120px;
       text-align: center;
+      width: 40%;
 
       &::before {
         left: unset;
         right: 50%;
         transform: translateX(50%);
         top: 0;
+      }
+
+      &::after {
+        border-bottom: none;
+        border-right: 1px solid $color-border-advantages;
+        content: "";
+        height: 84%;
+        position: absolute;
+        right: 0;
+        top: 1px;
+        width: 1px;
       }
 
     }

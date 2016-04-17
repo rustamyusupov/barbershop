@@ -1,22 +1,18 @@
 .news {
-  @include container;
-
+  background-color: $bg-color-news;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   padding-top: 75px;
-
-  outline: 1px dashed red;
 
   &__title {
     text-align: center;
   }
 
   &__item {
-    display: flex;
+    @include container;
 
-    outline: 1px dashed blue;
+    display: flex;
 
     &:nth-of-type(n+3) {
       display: none;

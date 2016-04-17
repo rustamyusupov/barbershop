@@ -1,4 +1,5 @@
 .prices {
+  position: relative;
 
   &__header {
     background-color: $bg-color-header;
@@ -76,8 +77,11 @@
   &__note {
     color: $color-note;
     font-size: 20px;
+    left: 51px;
     padding: 21px 0;
+    position: absolute;
     text-align: center;
+    z-index: 2;
 
     sup {
       top: -2px;

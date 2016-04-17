@@ -1,4 +1,23 @@
 .slider {
+  font-size: 0;
+  position: relative;
+  text-align: center;
 
-  outline: 1px dashed red;
+  &__btn {
+    border: 1px solid $color-white;
+    display: inline-block;
+    margin: 0 13px;
+    height: 5px;
+    transform: rotate(45deg);
+    width: 5px;
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .slider {
+    display: none;
+  }
+
 }
