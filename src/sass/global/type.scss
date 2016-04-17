@@ -21,22 +21,44 @@
 }
 
 $base-font: PT Sans Narrow, Arial, sans-serif;
+
+$font-size-base: 18px;
 $font-size-medium: 20px;
 $font-size-big: 30px;
+$font-size-extra: 40px;
+$font-size-huge: 72px;
 
-$line-height-base: 27px;
+
+$line-height-xsmall: 18px;
 $line-height-small: 24px;
+$line-height-base: 27px;
 $line-height-medium: 30px;
+$line-height-big: 40px;
+$line-height-huge: 72px;
 
 body {
   font-family: $base-font;
-  font-size: 18px;
+  font-size: $font-size-base;
   line-height: $line-height-base;
 }
 
-strong,
 b {
-  font-weight: 700;
+  font-size: $font-size-big;
+  font-weight: bold;
+  line-height: $line-height-medium;
+}
+
+@media #{$break-medium} {
+
+  b {
+    font-size: $font-size-extra;
+    line-height: $line-height-big;
+  }
+
+}
+
+p {
+  font-size: $font-size-medium;
 }
 
 a {
@@ -44,16 +66,14 @@ a {
   &:hover {
 
   }
+
 }
 
 ul {
+
     li {
-
+      font-weight: bold;
+      line-height: $line-height-small;
     }
-}
 
-table {
-  td {
-
-  }
 }

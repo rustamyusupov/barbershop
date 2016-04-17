@@ -1,12 +1,10 @@
 @import "global/mixin";
-@import "global/__color";
-@import "global/__variable";
-@import "global/__normalize";
+@import "global/variable";
+@import "global/normalize";
 @import "global/grid";
-@import "global/typography";
+@import "global/type";
 @import "global/buttons";
 @import "global/forms";
-
 
 @import "blocks/wrapper";
 @import "blocks/header";

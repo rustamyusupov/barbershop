@@ -3,7 +3,7 @@
   width: 320px;
 
   &__toggle {
-    background-color: $bg-menu-login;
+    background-color: $bg-color-menu-login;
     cursor: pointer;
     display: block;
     font-size: 0;
@@ -59,9 +59,7 @@
   }
 
   &__item {
-    background-color: $bg-menu-active;
-    font-weight: bold;
-    line-height: $line-height-small;
+    background-color: $bg-color-menu-active;
   }
 
   &__link {
@@ -87,7 +85,7 @@
   &__login {
     color: $color-white;
     display: block;
-    padding: 13px 20px;
+    padding: 14px 20px;
     padding-left: 47px;
     position: relative;
     text-decoration: none;
@@ -125,7 +123,7 @@
     }
 
     &__wrapper--opened {
-      background-color: $bg-menu-login;
+      background-color: $bg-color-menu-login;
       height: 100vh;
       left: 70px;
       position: absolute;
@@ -155,8 +153,8 @@
   .menu {
     @include container;
 
-    background-color: $bg-menu;
-    min-height: 74px;
+    background-color: $bg-color-menu;
+    /* min-height: 72px; */
 
     &__wrapper {
       display: flex;
@@ -173,8 +171,8 @@
     }
 
     &__item {
-      background-color: $bg-menu;
-      margin-right: 33px;
+      background-color: $bg-color-menu;
+      margin-right: 34px;
 
       &:last-child {
         margin-right: 0;
@@ -186,16 +184,16 @@
       border: none;
       color: $color-white;
       display: block;
-      padding: 24px 0;
-      padding-bottom: 25px;
+      padding: 0;
+      padding-bottom: 24px;
+      padding-top: 24px;
       position: relative;
-      //padding-bottom: 13px;
       text-decoration: none;
       text-transform: uppercase;
 
       &--active::after {
-        border-bottom: 3px solid $bg-menu-active;
-        bottom: 0;
+        border-bottom: 3px solid $bg-color-menu-active;
+        bottom: -2px;
         content: "";
         height: 3px;
         left: 0;
@@ -205,14 +203,45 @@
 
     }
 
-    &__login {
+    &__user {
       font-size: 0;
-
-      &::before {
-        top: 29px;
-      }
     }
 
+    &__login::before {
+        top: 29px;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .menu {
+
+    &__wrapper {
+      margin-left: 31px;
+    }
+
+    &__item {
+      margin-right: 65px;
+    }
+
+    &__user {
+      font-size: inherit;
+      margin-right: 11px;
+      text-transform: uppercase;
+    }
+
+    &__login {
+      padding-bottom: 23px;
+      padding-top: 25px;
+
+      &::before {
+        left: 11px;
+        top: 28px;
+      }
+    }
   }
 
 }

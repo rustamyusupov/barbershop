@@ -6,13 +6,12 @@
 @media #{$break-medium} {
 
   .header {
-    background-image: url("../img/bg-tablet.jpg");
-    min-height: 470px;
+    background-color: $bg-color-menu;
     padding: 0;
     position: relative;
 
     &--inner-page {
-      min-height: 250px;
+      //min-height: 250px;
     }
 
   }
@@ -22,10 +21,10 @@
 @media #{$break-large} {
 
   .header {
-    min-height: 719px;
+    //min-height: 719px;
 
     &--inner-page {
-      min-height: 320px;
+      //min-height: 320px;
     }
 
   }

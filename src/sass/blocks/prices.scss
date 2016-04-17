@@ -1,29 +1,88 @@
 .prices {
 
   &__header {
-    background-color: $bg-main-header;
+    background-color: $bg-color-header;
     padding: 0 30px;
-    padding-bottom: 26px;
+    padding-bottom: 25px;
     padding-top: 27px;
     text-align: center;
   }
 
   &__title {
-    @include title;
-
     display: block;
-    line-height: $line-height-medium;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
     padding: 0 20px;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   &__text {
-    font-size: $font-size-medium;
     margin: 0;
   }
 
   &__list {
+    border-collapse: collapse;
+    color: $color-white;
     width: 100%;
+
+    tr {
+      background-color: #404040;
+
+      &:nth-child(2) {
+        background-color: #4e4e4e;
+      }
+
+      &:nth-child(3) {
+        background-color: #353535;
+      }
+
+      &:nth-child(4) {
+        background-color: #404040;
+      }
+
+    }
+
+  }
+
+  &__value,
+  &__field {
+    padding: 20px;
+    padding-bottom: 18px;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  &__value {
+    font-size: $font-size-extra;
+    font-weight: bold;
+    line-height: $line-height-big;
+    padding-right: 0;
+
+    sup {
+      padding-left: 7px;
+      top: -11px;
+    }
+
+  }
+
+  &__field {
+    font-size: $font-size-base;
+    line-height: $line-height-xsmall;
+    text-align: right;
+    padding-left: 0;
+    padding-top: 21px;
+  }
+
+  &__note {
+    color: $color-note;
+    font-size: 20px;
+    padding: 21px 0;
+    text-align: center;
+
+    sup {
+      top: -2px;
+    }
+
   }
 
 }
@@ -33,36 +92,98 @@
   .prices {
     @include container;
 
-    margin-top: -184px;
-    padding-top: 45px;
     position: relative;
 
     &__header {
       display: flex;
       justify-content: space-between;
-      min-height: 79px;
-      padding-bottom: 60px;
-      padding-left: 41px;
-      padding-right: 51px;
+      margin-top: -184px;
+      padding: 0;
+      padding-bottom: 57px;
       text-align: left;
+
+      &::before {
+        border: 11px solid transparent;
+        border-top: 11px solid $bg-color-header;
+        border-right: 11px solid $bg-color-header;
+        content: "";
+        left: -22px;
+        position: absolute;
+        top: 42px;
+      }
+
     }
 
     &__title {
+      padding: 0;
+      padding-left: 41px;
+      padding-top: 30px;
+      text-align: left;
+      text-transform: none;
       width: 40%;
     }
 
     &__text {
-      width: 34%;
+      padding-right: 76px;
+      padding-top: 36px;
+      width: 33%;
     }
 
     &__list {
+      @include clearfix;
+
       display: block;
+
+      tr {
+        display: block;
+        float: left;
+        padding-bottom: 27px;
+        padding-left: 34px;
+        padding-right: 36px;
+        padding-top: 25px;
+        width: 250px;
+      }
+
+    }
+
+    &__value,
+    &__field {
+      display: block;
+      padding: 0;
+      text-align: left;
+      width: auto;
+    }
+
+    &__value {
+      font-size: $font-size-huge;
+      line-height: $line-height-huge;
+      padding-bottom: 8px;
+
+      sup {
+        font-size: $font-size-extra;
+        padding-left: 15px;
+        top: -25px;
+      }
+    }
+
+    &__field {
+      font-size: $font-size-medium;
+      line-height: $line-height-base;
+      padding-left: 2px;
+
+      br {
+        display: none;
+      }
+
     }
 
     &__note {
-      left: 10%;
+      color: $color-note;
+      font-size: $font-size-medium;
+      left: 41px;
+      padding: 0;
       position: absolute;
-      top: 160px;
+      top: 130px;
     }
 
   }
@@ -72,26 +193,40 @@
 @media #{$break-large} {
 
   .prices {
+    @include container;
+    background-color: unset;
     display: flex;
-    margin-top: -160px;
-    padding-top: 30px;
+    margin-top: -159px;
 
     &__header {
       display: block;
-      padding-bottom: 36px;
-      width: 33.3333%;
+      margin: 0;
+      padding: 0;
+      width: 50%;
+
+      &::before {
+        top: 37px;
+      }
+
     }
 
     &__title {
-      width: auto;
+      width: 80%;
     }
 
     &__text {
-      width: auto;
+      padding-left: 42px;
+      padding-top: 27px;
+      width: 65%;
     }
 
     &__list {
-      width: 66.6666%;
+      margin: 0;
+    }
+
+    &__note {
+      left: 41px;
+      top: 264px;
     }
 
   }
