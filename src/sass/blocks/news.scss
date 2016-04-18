@@ -1,18 +1,35 @@
 .news {
   background-color: $bg-color-news;
+  border-bottom: 1px solid $color-border-news;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 75px;
+  padding-bottom: 28px;
+  padding-top: 42px;
 
   &__title {
+    font-size: $font-size-big;
+    line-height: $line-height-medium;
+    margin: 0;
+    margin-bottom: 12px;
+    padding-top: 25px;
     text-align: center;
+    text-transform: uppercase;
   }
 
   &__item {
     @include container;
 
-    display: flex;
+    border-bottom: 1px solid $color-border-news;
+    padding-bottom: 18px;
+    padding-top: 16px;
+    position: relative;
+
+    &:nth-of-type(n+2) {
+      border: none;
+      // TODO: Как сделать у последнего?
+      margin-bottom: 5px;
+    }
 
     &:nth-of-type(n+3) {
       display: none;
@@ -21,11 +38,54 @@
   }
 
   &__date {
-    width: 25%;
+    background-color: $bg-color-menu;
+    color: $color-white;
+    font-size: $font-size-small;
+    height: 50px;
+    left: 0;
+    line-height: $line-height-medium;
+    position: absolute;
+    text-align: center;
+    top: 27px;
+    width: 50px;
+
+    &::after {
+      content: "";
+      background-image:
+        linear-gradient(
+          to top right,
+          transparent 50%,
+          $bg-color 50%
+        ),
+        linear-gradient(
+          to top left,
+          transparent 50%,
+          $bg-color 50%
+        );
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 50.1% 100%;
+      height: 10px;
+      left: 0;
+      position: absolute;
+      bottom: -10px;
+      width: 100%;
+    }
+
+  }
+
+  &__date-big {
+    display: block;
+    font-size: $font-size-big;
+    font-weight: bold;
+    margin-bottom: -11px;
+    padding-top: 5px;
   }
 
   &__text {
-    width: 75%;
+    font-size: $font-size-base;
+    margin: 0;
+    padding-left: 69px;
   }
 
 }
@@ -33,16 +93,34 @@
 @media #{$break-medium} {
 
   .news  {
-    padding-top: 95px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 64px;
+    padding-top: 67px;
     position: relative;
 
     &__title {
+      font-size: $font-size-extra;
+      line-height: $line-height-medium;
       text-align: left;
       width: 100%;
     }
 
     &__item {
+      border: none;
+      margin: 0;
+      margin-bottom: 17px;
+      margin-top: 31px;
       width: 50%;
+    }
+
+    &__text {
+      padding-right: 27px;
+    }
+
+    &__only-mobile {
+      display: none;
     }
 
   }
@@ -52,15 +130,25 @@
 @media #{$break-large} {
 
   .news  {
-    padding-top: 125px;
+    padding: 0 120px;
+    padding-top: 100px;
+
+    &__title {
+      margin-left: 70px;
+    }
 
     &__item {
+      margin-bottom: 21px;
       width: 33.3333%;
 
       &:nth-of-type(n+3) {
         display: flex;
       }
 
+    }
+
+    &__text {
+      padding-right: 30px;
     }
 
   }

@@ -1,6 +1,5 @@
 .feedback {
-  @include container;
-
+  background-color: $bg-color-news;
   padding-bottom: 60px;
   padding-top: 30px;
 
@@ -9,6 +8,8 @@
   }
 
   &__item {
+    @include container;
+
     padding-left: 75px;
     position: relative;
 
@@ -28,7 +29,7 @@
     display: none;
   }
 
-  outline: 1px dashed red;
+  //outline: 1px dashed red;
 }
 
 @media #{$break-medium} {
