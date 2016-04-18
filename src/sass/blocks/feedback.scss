@@ -1,16 +1,45 @@
 .feedback {
   background-color: $bg-color-news;
-  padding-bottom: 60px;
-  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-top: 26px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image:
+      linear-gradient(
+        to top right,
+        transparent 50%,
+        $bg-color-news 50%
+      ),
+      linear-gradient(
+        to top left,
+        transparent 50%,
+        $bg-color-news 50%
+      );
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    z-index: 10;
+  }
 
   &__header-title {
-    text-align: center;
+    @include title;
+
+    margin: 0;
+    margin-bottom: 29px;
   }
 
   &__item {
-    @include container;
-
-    padding-left: 75px;
+    min-height: 166px;
+    padding-bottom: 0;
+    padding-left: 91px;
+    padding-right: 15px;
     position: relative;
 
     &:nth-of-type(n+2) {
@@ -20,26 +49,66 @@
   }
 
   &__image {
-    left: 15px;
+    border: 1px solid $color-border-picture;
+    height: 46px;
+    left: 19px;
     position: absolute;
-    top: 15px;
+    top: 10px;
+    width: 48px;
+  }
+
+  &__title {
+    display: block;
+    font-size: $font-size-large;
+    font-weight: bold;
+    line-height: $line-height-base;
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    font-size: $font-size-base;
+    margin: 0;
   }
 
   &__toggle {
     display: none;
   }
 
-  //outline: 1px dashed red;
+  .feedback__item {
+    display: none;
+  }
+
+  #feedback-1:checked ~ .feedback__item--travis,
+  #feedback-2:checked ~ .feedback__item--john,
+  #feedback-3:checked ~ .feedback__item--ivan {
+    display: block;
+  }
+
+  #feedback-1:checked ~ .slider label[for="feedback-1"],
+  #feedback-2:checked ~ .slider label[for="feedback-2"],
+  #feedback-3:checked ~ .slider label[for="feedback-3"] {
+    background-color: $color-black;
+  }
+
 }
 
 @media #{$break-medium} {
 
   .feedback {
-    padding-bottom: 70px;
-    padding-top: 30px;
+    padding-bottom: 71px;
+    padding-top: 45px;
     position: relative;
 
+    &::after {
+      content: none;
+    }
+
     &__header-title {
+      @include container;
+
+      font-size: $font-size-extra;
+      line-height: $line-height-medium;
+      padding-bottom: 48px;
       text-align: left;
     }
 
@@ -48,27 +117,67 @@
     }
 
     &__item {
-      padding-left: 130px;
-      padding-right: 100px;
+      border: 1px solid $color-border-news;
+      margin: 0 113px;
+      min-height: 128px;
+      padding-left: 141px;
+      padding-top: 30px;
     }
 
     &__image {
-      left: 60px;
+      // TODO: Как кадрировать?
+      border-radius: 50%;
+      height: 80px;
+      left: 30px;
+      top: 36px;
+      width: 80px;
+    }
+
+    &__title {
+      padding-bottom: 3px;
     }
 
     &__toggle {
-      bottom: 50%;
+      background: none;
+      border: 1px solid $color-border-news;
       display: block;
+      font-size: 0;
+      height: 160px;
+      outline: none;
       position: absolute;
-      transform: translateY(50%);
+      top: 0;
+      width: 50px;
+
+      &--prev::after,
+      &--next::after {
+        border-bottom: 6px solid transparent;
+        border-top: 6px solid transparent;
+        bottom: 50%;
+        content: "";
+        cursor: pointer;
+        height: 0;
+        position: absolute;
+        right: 50%;
+        transform: translate(50%, 50%);
+        width: 0;
+      }
 
       &--prev {
-        left: 0;
-        order: -1;
+        left: 64px;
+
+        &::after {
+          border-right: 12px solid $color-black;
+        }
+
       }
 
       &--next {
-        right: 0;
+        right: 64px;
+
+        &::after {
+          border-left: 12px solid $color-black;
+        }
+
       }
 
     }
@@ -80,20 +189,41 @@
 @media #{$break-large} {
 
   .feedback {
-    padding-bottom: 100px;
+    padding-bottom: 98px;
+
+    &__header-title {
+      padding-left: 142px;
+    }
+
+    &__items {
+      padding: 0 78px;
+    }
 
     &__item {
-      padding-bottom: 70px;
-      padding-left: 350px;
+      padding-bottom: 0px;
+      padding-left: 319px;
+      padding-right: 40px;
     }
 
     &__image {
-      height: 166px;
+      border: none;
+      border-radius: unset;
+      height: 159px;
+      left: 0;
+      top: 0;
       width: 249px;
     }
 
     &__toggle {
-      //width: 5%;
+
+      &--prev {
+        left: 120px;
+      }
+
+      &--next {
+        right: 120px;
+      }
+
     }
 
   }

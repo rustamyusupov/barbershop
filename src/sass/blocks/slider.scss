@@ -10,6 +10,11 @@
     height: 5px;
     transform: rotate(45deg);
     width: 5px;
+
+    &--feedback {
+      border-color: $color-border-slider;
+    }
+
   }
 
 }
@@ -17,7 +22,29 @@
 @media #{$break-medium} {
 
   .slider {
-    display: none;
+
+    &--advantages {
+      display: none;
+    }
+
+    &--feedback {
+      background-color: $bg-color-news;
+      bottom: -17px;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      width: 125px;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .slider--feedback {
+    background-color: none;
+    bottom: -65px;
   }
 
 }

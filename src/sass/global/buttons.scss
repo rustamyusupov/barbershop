@@ -35,6 +35,15 @@
 
     }
   }
+
+  &--to-main {
+    display: none;
+  }
+
+  &--feedback {
+    display: none;
+  }
+
 }
 
 @media #{$break-medium} {
@@ -48,6 +57,18 @@
       top: 84px;
     }
 
+    &--feedback {
+      display: block;
+      padding: 12px 23px;
+      position: absolute;
+      right: 65px;
+      top: 37px;
+    }
+
+    &--to-main {
+      display: block;
+    }
+
   }
 
 }
@@ -59,6 +80,10 @@
     &--news {
       right: 121px;
       top: 117px;
+    }
+
+    &--feedback {
+      right: 121px;
     }
 
   }
