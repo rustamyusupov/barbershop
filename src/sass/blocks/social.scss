@@ -1,13 +1,16 @@
 .social {
-  display: flex;
-  justify-content: center;
-  min-height: 100px;
 
   &__title {
     display: none;
   }
 
-  outline: 1px dashed red;
+  &__icons {
+    border: 1px solid $color-border-footer;
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+  }
+
 }
 
 @media #{$break-medium} {
@@ -27,11 +30,19 @@
     order: 2;
     padding-top: 50px;
     text-align: center;
-    width: 33.3333%;
+    width: 20%;
 
     &__title {
       display: block;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      margin-bottom: 5px;
       width: 100%;
+    }
+
+    &__icons {
+      border: none;
+      display: block;
     }
 
   }

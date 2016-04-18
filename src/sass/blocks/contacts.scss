@@ -1,19 +1,52 @@
 .contacts {
+  @include container;
+
   padding-bottom: 25px;
-  padding-top: 40px;
+  padding-top: 31px;
   text-align: center;
 
-  outline: 1px dashed red;
+  &__title {
+    display: block;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    margin: 0;
+    margin-bottom: 19px;
+  }
+
+  &__tel {
+    display: none;
+  }
+
 }
 
 @media #{$break-medium} {
 
   .contacts {
     order: 1;
-    padding-bottom: 50px;
+    padding-bottom: 41px;
     padding-top: 50px;
     text-align: left;
-    width: 70%;
+    width: 75%;
+
+    &__title {
+      text-transform: uppercase;
+    }
+
+    &__text {
+      margin: 0;
+      margin-bottom: 2px;
+    }
+
+    &__tel {
+      display: inline;
+    }
+
   }
 
 }
@@ -22,7 +55,7 @@
 
   .contacts {
     padding-top: 50px;
-    width: 33.3333%;
+    width: 40%;
   }
 
 }

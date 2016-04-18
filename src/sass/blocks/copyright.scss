@@ -1,9 +1,13 @@
 .copyright {
   padding-bottom: 25px;
-  padding-top: 30px;
+  padding-top: 9px;
   text-align: center;
 
-  outline: 1px dashed red;
+  &__title {
+    font-size: $font-size-base;
+    margin-bottom: 12px;
+  }
+
 }
 
 @media #{$break-medium} {
@@ -11,8 +15,8 @@
   .copyright {
     order: 2;
     padding-bottom: 50px;
-    padding-top: 50px;
-    width: 30%;
+    padding-top: 30px;
+    width: 25%;
   }
 
 }
@@ -21,8 +25,14 @@
 
   .copyright {
     order: 3;
-    padding-top: 50px;
-    width: 33.3333%;
+    padding-top: 31px;
+    text-align: right;
+    width: 40%;
+
+    &__title {
+      padding-right: 39px;
+    }
+
   }
 
 }

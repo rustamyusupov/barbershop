@@ -1,12 +1,15 @@
 .footer {
-  @include container;
-
-  outline: 1px dashed red;
+  border: 1px solid $color-border-footer;
+  color: $color-white;
+  margin-top: 35px;
 }
 
 @media #{$break-medium} {
 
   .footer {
+    @include container;
+
+    border: none;
     display: flex;
     flex-wrap: wrap;
   }
