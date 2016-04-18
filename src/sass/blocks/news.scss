@@ -8,13 +8,11 @@
   padding-top: 42px;
 
   &__title {
-    font-size: $font-size-big;
-    line-height: $line-height-medium;
+    @include title;
+
     margin: 0;
     margin-bottom: 12px;
     padding-top: 25px;
-    text-align: center;
-    text-transform: uppercase;
   }
 
   &__item {

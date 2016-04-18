@@ -75,9 +75,10 @@
   }
 
   &__title {
+    @include title;
+
     display: block;
     margin-bottom: 15px;
-    text-transform: uppercase;
   }
 
   &__text {
@@ -156,12 +157,10 @@
     }
 
     &__title {
-      font-size: $font-size-big;
       line-height: 42.33px;
       margin-bottom: 9px;
+      text-align: left;
     }
-
-
 
   }
 
@@ -205,6 +204,10 @@
         width: 1px;
       }
 
+    }
+
+    &__title {
+      text-align: center;
     }
 
   }

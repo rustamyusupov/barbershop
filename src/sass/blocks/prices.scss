@@ -10,11 +10,11 @@
   }
 
   &__title {
+    @include title;
+
     display: block;
     margin-bottom: 17px;
     padding: 0 20px;
-    text-align: center;
-    text-transform: uppercase;
   }
 
   &__text {
@@ -119,6 +119,8 @@
     }
 
     &__title {
+      font-size: $font-size-extra;
+      line-height: $line-height-big;
       padding: 0;
       padding-left: 41px;
       padding-top: 30px;
