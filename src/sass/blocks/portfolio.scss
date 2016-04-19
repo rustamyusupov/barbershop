@@ -203,16 +203,38 @@
   .portfolio {
 
     &__header {
+      @include container;
+
+      align-items: center;
       display: flex;
       justify-content: space-between;
+      padding-bottom: 20px;
+      padding-top: 24px;
+    }
+
+    &__title {
+      font-size: $font-size-extra;
     }
 
     &__item {
-      @include clearfix;
+      //@include clearfix;
+
+      &--month {
+
+        &::before,
+        &::after {
+          content: none;
+        }
+
+      }
+
     }
 
+
+
     &__item-photo {
-      float: left;
+      //float: left;
+      //width: 270px;
     }
 
     &__item-description {
