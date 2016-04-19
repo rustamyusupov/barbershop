@@ -1,19 +1,98 @@
 .price-list  {
-  @include container;
+  color: $color-white;
+  background-color: $bg-color-price;
+  padding: 0 20px;
+  padding-bottom: 19px;
+  padding-top: 50px;
+  position: relative;
 
-  outline: 1px dashed red;
+  &::after {
+    content: "";
+    background-image:
+      linear-gradient(
+        to top right,
+        transparent 50%,
+        $bg-color-price 50%
+      ),
+      linear-gradient(
+        to top left,
+        transparent 50%,
+        $bg-color-price 50%
+      );
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__title {
+    @include title;
+
+    margin-bottom: 21px;
+  }
 
   &__table {
+    display: block;
+    margin-bottom: 11px;
     width: 100%;
+
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: $font-size-medium;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 0;
+    }
+
+    td {
+      display: block;
+      padding: 0;
+    }
+
+    .col-1 {
+      display: none;
+    }
+
+    .col-2 {
+      font-weight: bold;
+      padding-left: 0;
+    }
+
+    .col-3 {
+      order: 3;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    .col-4 {
+      order: 2;
+      padding-right: 0;
+    }
+
   }
 
   &__discount {
+    align-items: center;
+    border: 1px solid $color-border-discount;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+
+  &__discount-clock {
+    fill: $color-white;
+    width: 35%;
   }
 
   &__discount-text {
-    width: 50%;
+    margin: 0;
+    width: 59%;
   }
 
 }

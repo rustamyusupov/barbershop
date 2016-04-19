@@ -1,42 +1,199 @@
 .portfolio {
-  @include container;
-
-  outline: 1px dashed red;
+  background-color: $bg-color-news;
 
   &__title {
+    @include title;
+
+    margin: 0;
+    padding-bottom: 30px;
+    padding-top: 29px;
     text-align: center;
   }
 
+  &__items {
+    padding-bottom: 14px;
+    position: relative;
+
+    // TODO: Миксин для треугольника!
+    &::after {
+      content: "";
+      background-image:
+        linear-gradient(
+          to top right,
+          transparent 50%,
+          $bg-color-news 50%
+        ),
+        linear-gradient(
+          to top left,
+          transparent 50%,
+          $bg-color-news 50%
+        );
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 50.1% 100%;
+      height: 35px;
+      left: 0;
+      position: absolute;
+      bottom: -35px;
+      width: 100%;
+      z-index: 10;
+    }
+
+  }
+
   &__item {
+    @include container;
+
     margin-bottom: 20px;
 
-    outline: 1px dashed blue;
+    &--month {
+      position: relative;
+
+      &::before {
+        background-color: $bg-color-menu-active;
+        color: $color-white;
+        content: "Работа месяца";
+        font-size: $font-size-medium;
+        font-weight: bold;
+        left: 0;
+        line-height: $line-height-base;
+        padding-bottom: 11px;
+        padding-left: 27px;
+        padding-right: 17px;
+        padding-top: 12px;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 401px;
+      }
+
+      &::after {
+        content: "";
+        background-image:
+          linear-gradient(
+            to bottom right,
+            $bg-color-menu-active 50%,
+            transparent 50%
+          ),
+          linear-gradient(
+            to top right,
+            $bg-color-menu-active 50%,
+            transparent 50%
+          );
+        background-position: 0 100%, 0 0;
+        background-repeat: no-repeat;
+        background-size: 80.1% 100%;
+        height: 50px;
+        left: 157px;
+        position: absolute;
+        top: 401px;
+        width: 25px;
+        z-index: 10;
+      }
+
+    }
+
+  }
+
+  &__item--month &__item-description {
+    padding-top: 19px;
+    padding-bottom: 17px;
   }
 
   &__item-description {
-    padding-bottom: 5px;
-    padding-left: 20px;
+    border: 1px solid $color-border-news;
+    border-bottom: none;
+    border-top: none;
+    padding-bottom: 20px;
+    padding-left: 23px;
     padding-right: 20px;
-    padding-top: 15px;
+    padding-top: 23px;
+  }
+
+  &__item-name {
+    display: block;
+    font-size: $font-size-large;
+    line-height: $line-height-base;
+    margin-bottom: 14px;
+  }
+
+  &__item-feedback {
+    font-size: $font-size-base;
+    margin: 0;
+  }
+
+  &__item--month &__item-services {
+    padding-bottom: 0;
   }
 
   &__item-services {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 15px;
-    padding-left: 20px;
+    border: 1px solid $color-border-news;
+    border-top: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9px;
   }
 
-  &__item-service {
-    align-items: center;
-    display: flex;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 30px;
+  &__item--month &__item-title--beard::before {
+    left: 14px;
   }
 
-  &__item-icon {
-    padding-right: 15px;
+  &__item-title {
+    display: inline-block;
+    font-size: $font-size-small;
+    font-weight: normal;
+    padding-bottom: 18px;
+    padding-right: 20px;
+    position: relative;
+    text-transform: uppercase;
+    vertical-align: top;
+
+    &::before {
+      background-repeat: no-repeat;
+      content: "";
+      position: absolute;
+    }
+
+    &--scissors {
+      padding-left: 58px;
+
+      &::before {
+        background-image: url("../img/scissors-icon.svg");
+        height: 20px;
+        left: 22px;
+        top: 3px;
+        width: 21px;
+      }
+
+    }
+
+    &--beard {
+      padding-left: 57px;
+
+      &::before {
+        background-image: url("../img/beard-icon.svg");
+        height: 21px;
+        left: 18px;
+        top: 1px;
+        width: 23px;
+      }
+
+    }
+
+    &--mustache {
+      padding-left: 68px;
+
+      &::before {
+        background-image: url("../img/mustache-icon.svg");
+        height: 12px;
+        left: 12px;
+        top: 6px;
+        width: 45px;
+      }
+
+    }
+
   }
 
 }

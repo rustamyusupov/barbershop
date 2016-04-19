@@ -107,6 +107,14 @@
 
   .menu {
 
+    &__item-our-works {
+      display: none;
+    }
+
+    &__wrapper--opened &__item-our-works {
+      display: inline;
+    }
+
     &__wrapper--closed &__item,
     &__wrapper--closed &__user {
       display: none;
