@@ -187,7 +187,7 @@
       width: 40%;
 
       &::before {
-        left: unset;
+        left: auto;
         right: 50%;
         transform: translateX(50%);
         top: 0;

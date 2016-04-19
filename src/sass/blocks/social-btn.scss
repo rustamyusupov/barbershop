@@ -17,25 +17,29 @@
     content: "";
     right: 50%;
     position: absolute;
-    bottom: 50%;
-    transform: translate(50%, 50%);
+    // TODO: Почему не работает вертикальное выравнивание в IE?
+    //top: 50%;
+    transform: translate(50%); //, -50%);
   }
 
   &--vk::after {
     background-position: -10px -241px;
     height: 26px;
+    top: 37px;
     width: 23px;
   }
 
   &--fb::after {
     background-position: -10px -10px;
     height: 39px;
+    top: 30px;
     width: 18px;
   }
 
   &--ig::after {
     background-position: -10px -110px;
     height: 36px;
+    top: 32px;
     width: 36px;
   }
 
@@ -57,18 +61,21 @@
     &--vk::after {
       background-position: -10px -287px;
       height: 17px;
+      top: 15px;
       width: 15px;
     }
 
     &--fb::after {
       background-position: -10px -69px;
       height: 21px;
+      top: 13px;
       width: 10px;
     }
 
     &--ig::after {
       background-position: -10px -166px;
       height: 19px;
+      top: 14px;
       width: 19px;
     }
 

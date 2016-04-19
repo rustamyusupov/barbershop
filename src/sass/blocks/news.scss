@@ -17,6 +17,7 @@
 
   &__item {
     @include container;
+    margin: 0;
 
     border-bottom: 1px solid $color-border-news;
     padding-bottom: 18px;
