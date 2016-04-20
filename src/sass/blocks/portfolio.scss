@@ -95,15 +95,26 @@
 
   }
 
+  &__item-photo {
+    height: 176px;
+    width: 280px;
+  }
+
+  &__item--month &__item-photo {
+    height: 480px;
+  }
+
   &__item--month &__item-description {
     padding-top: 19px;
     padding-bottom: 17px;
   }
 
-  &__item-description {
+  &__item-sub {
     border: 1px solid $color-border-news;
-    border-bottom: none;
     border-top: none;
+  }
+
+  &__item-description {
     padding-bottom: 20px;
     padding-left: 23px;
     padding-right: 20px;
@@ -127,8 +138,6 @@
   }
 
   &__item-services {
-    border: 1px solid $color-border-news;
-    border-top: none;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -216,8 +225,40 @@
       font-size: $font-size-extra;
     }
 
+    &__items {
+      padding-bottom: 24px;
+
+      &::after {
+        content: "";
+        background-image:
+          linear-gradient(
+            to top right,
+            transparent 50%,
+            $bg-color-news 50%
+          ),
+          linear-gradient(
+            to top left,
+            transparent 50%,
+            $bg-color-news 50%
+          );
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
+        background-size: 50.1% 100%;
+        height: 38px;
+        left: 0;
+        position: absolute;
+        bottom: -38px;
+        width: 100%;
+        z-index: 10;
+      }
+
+    }
+
     &__item {
-      //@include clearfix;
+      @include container;
+
+      display: flex;
+      margin-bottom: 41px;
 
       &--month {
 
@@ -230,20 +271,94 @@
 
     }
 
+    &__item-sub {
+      border-left: none;
+      border-top: 1px solid $color-border-news;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 51px;
+      padding-top: 39px;
+      width: 100%;
+    }
 
+    &__item--month &__item-sub {
+      padding-top: 24px;
+    }
 
     &__item-photo {
-      //float: left;
-      //width: 270px;
+      height: 294px;
+      width: 270px;
+    }
+
+    &__item--month &__item-photo {
+      height: 480px;
     }
 
     &__item-description {
       display: block;
-      padding-left: 320px;
+      padding: 0;
+    }
+
+    &__item-name {
+      padding-bottom: 12px;
+    }
+
+    &__item-feedback {
+      padding-right: 60px;
+    }
+
+    &__item--month &__item-feedback {
+      padding-right: 50px;
     }
 
     &__item-services {
-      padding-left: 35px;
+      padding: 0;
+      padding-bottom: 23px;
+    }
+
+    &__item--month &__item-services {
+      padding-bottom: 16px;
+    }
+
+    &__item-title {
+      padding-right: 17px;
+
+      &--scissors {
+        padding-left: 39px;
+
+        &::before {
+          left: 0px;
+          top: 3px;
+        }
+
+      }
+
+      &--beard {
+        padding-left: 39px;
+        padding-right: 40px;
+
+        &::before {
+          left: 0px;
+          top: 1px;
+        }
+
+      }
+
+      &--mustache {
+        padding-left: 46px;
+
+        &::before {
+          left: -11px;
+          top: 6px;
+        }
+
+      }
+
+    }
+
+    &__item--month &__item-title--beard {
+      padding-left: 57px;
     }
 
   }
@@ -267,6 +382,14 @@
       &--month {
         flex: 0 2 100%;
       }
+    }
+
+    &__item-photo {
+      width: 294px;
+    }
+
+    &__item--month &__item-photo {
+      width: 480px;
     }
 
     &__item-description {

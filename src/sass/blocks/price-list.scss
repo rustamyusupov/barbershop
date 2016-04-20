@@ -100,10 +100,88 @@
 @media #{$break-medium} {
 
   .price-list {
+    padding-top: 86px;
+    padding-bottom: 57px;
+
+    &::after {
+      content: none;
+    }
+
+    &__title {
+      @include container;
+
+      font-size: $font-size-extra;
+      text-align: left;
+      padding-bottom: 54px;
+    }
+
+    &__bracket {
+      display: none;
+    }
+
+    &__table {
+      @include container;
+
+      border-spacing: 0;
+      display: table;
+      margin-bottom: 10px;
+
+      tr {
+        display: table-row;
+        font-size: $font-size-medium;
+      }
+
+      td {
+        border: 1px solid $color-border-discount;
+        display: table-cell;
+        padding: 13px 19px;
+        vertical-align: top;
+      }
+
+      .col-1 {
+        color: $color-table-number;
+        display: table-cell;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        width: 70px;
+      }
+
+      .col-2 {
+        padding: 13px 19px;
+        min-width: 205px;
+      }
+
+      .col-3 {
+        order: 2;
+        padding: 13px 19px;
+        width: auto;
+      }
+
+      .col-4 {
+        order: 3;
+        padding: 13px 19px;
+        min-width: 120px;
+      }
+
+    }
 
     &__discount {
-      padding-bottom: 20px;
-      padding-top: 20px;
+      @include container;
+      padding: 20px 0;
+    }
+
+    &__discount-clock {
+      height: 70px;
+      padding-left: 27px;
+      width: 71px;
+    }
+
+    &__discount-text {
+      font-size: $font-size-big;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 71%;
     }
 
   }
