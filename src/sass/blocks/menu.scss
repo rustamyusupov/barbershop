@@ -236,13 +236,14 @@
 
     &__user {
       font-size: inherit;
+      font-weight: bold;
       margin-right: 11px;
       text-transform: uppercase;
     }
 
     &__login {
       padding-bottom: 23px;
-      padding-top: 25px;
+      padding-top: 24px;
 
       &::before {
         left: 11px;

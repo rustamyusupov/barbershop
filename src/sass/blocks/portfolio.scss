@@ -226,30 +226,11 @@
     }
 
     &__items {
-      padding-bottom: 24px;
+      padding-bottom: 20px;
 
       &::after {
-        content: "";
-        background-image:
-          linear-gradient(
-            to top right,
-            transparent 50%,
-            $bg-color-news 50%
-          ),
-          linear-gradient(
-            to top left,
-            transparent 50%,
-            $bg-color-news 50%
-          );
-        background-position: 0 0, 100% 0;
-        background-repeat: no-repeat;
-        background-size: 50.1% 100%;
-        height: 38px;
-        left: 0;
-        position: absolute;
-        bottom: -38px;
-        width: 100%;
-        z-index: 10;
+        height: 42px;
+        bottom: -42px;
       }
 
     }
@@ -260,13 +241,9 @@
       display: flex;
       margin-bottom: 41px;
 
-      &--month {
-
-        &::before,
-        &::after {
-          content: none;
-        }
-
+      &--month::before,
+      &--month::after {
+        content: none;
       }
 
     }
@@ -369,19 +346,66 @@
 
   .portfolio {
 
+    &__header {
+      padding-bottom: 61px;
+      padding-top: 20px;
+    }
+
     &__items {
+      @include container;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 48px;
+
+      &::after {
+        content: none;
+      }
+
     }
 
     &__item {
-      float: none;
-      flex: 1 0 33.3333%;
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 41px;
+      padding: 0;
+      width: 292px;
 
       &--month {
-        flex: 0 2 100%;
+        flex-direction: row;
+        width: 100%;
+
+        &::before {
+          content: "Работа месяца";
+          left: auto;
+          padding-left: 23px;
+          padding-right: 21px;
+          right: 0;
+          text-align: left;
+          top: 26px;
+        }
+
+        &::after {
+          content: "";
+          background-image:
+            linear-gradient(
+              to bottom left,
+              $bg-color-menu-active 50%,
+              transparent 50%
+            ),
+            linear-gradient(
+              to top left,
+              $bg-color-menu-active 50%,
+              transparent 50%
+            );
+          left: auto;
+          right: 152px;
+          top: 26px;
+        }
+
       }
+
     }
 
     &__item-photo {
@@ -392,13 +416,48 @@
       width: 480px;
     }
 
+    &__item-sub {
+      border: 1px solid $color-border-news;
+      border-top: none;
+      min-height: 216px;
+      padding: 0;
+      padding-top: 29px;
+      width: 100%;
+    }
+
+    &__item--month &__item-sub {
+      border: 1px solid $color-border-news;
+      border-left: none;
+      padding-left: 40px;
+      padding-top: 128px;
+      width: 100%;
+    }
+
     &__item-description {
-      padding-left: 20px;
-      padding-top: 200px;
+      padding-left: 33px;
+      padding-right: 15px;
+    }
+
+    &__item--month &__item-description {
+      padding: 0;
+    }
+
+    &__item-feedback {
+      padding: 0;
+    }
+
+    &__item--month &__item-feedback {
+      padding-right: 160px;
     }
 
     &__item-services {
-      padding-left: 20px;
+      padding-bottom: 14px;
+      padding-left: 32px;
+    }
+
+    &__item--month &__item-services {
+      padding: 0;
+      padding-bottom: 11px;
     }
 
   }
