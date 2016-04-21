@@ -23,12 +23,6 @@
     margin-bottom: 26px;
   }
 
-  &__for-master {
-    height: 112px;
-    padding: 8px 18px;
-    resize: none;
-  }
-
   &__model {
     text-align: center;
   }
@@ -50,7 +44,9 @@
   &__field {
     color: $color-black;
     border: 1px solid $color-border-news;
+    font-size: $font-size-base;
     line-height: $line-height-medium;
+    padding: 9px 18px;
 
     &::placeholder {
       color: $color-black;
@@ -58,9 +54,12 @@
 
   }
 
+  &__for-master {
+    height: 112px;
+    resize: none;
+  }
+
   &__field {
-    padding: 13px 18px;
-    padding-bottom: 15px;
 
     &--name {
       margin-bottom: 6px;
@@ -167,6 +166,49 @@
 @media #{$break-medium} {
 
   .order-form {
+    padding-bottom: 76px;
+
+    &__title {
+      background-color: $bg-color-news;
+      display: inline-block;
+      font-size: $font-size-big;
+      line-height: $line-height-medium;
+      position: relative;
+      text-align: center;
+    }
+
+    &__contacts {
+      margin-bottom: 52px;
+    }
+
+    &__model {
+      margin-bottom: 54px;
+    }
+
+    &__model::before,
+    &__additional::before {
+      border-top: 1px solid $color-border-news;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: relative;
+      top: 17px;
+      width: 100%;
+    }
+
+    &__model &__title {
+      margin-bottom: 39px;
+      padding: 0 25px;
+    }
+
+    &__additional {
+      margin-bottom: 6px;
+    }
+
+    &__additional &__title {
+      padding: 0 31px;
+    }
 
     &__name {
       display: flex;
@@ -178,15 +220,52 @@
       width: 100%;
     }
 
+    &__caption {
+      font-size: $font-size-large;
+      line-height: $line-height-small;
+
+      &--model {
+        margin-bottom: 19px;
+
+        &::before {
+          top: -78px;
+        }
+
+      }
+
+    }
+
+    &__field--model:checked + &__caption--model::after {
+      top: -62px;
+    }
+
+    &__for-master,
+    &__field {
+      font-size: $font-size-large;
+      line-height: $line-height-medium;
+      padding: 19px 24px;
+    }
+
+    &__for-master {
+      height: 211px;
+      resize: none;
+    }
+
     &__field {
 
       &--name {
         margin: 0;
+        margin-bottom: 9px;
         width: 33.3333%;
+
+        &:nth-child(2) {
+          order: -1;
+        }
+
       }
 
       &--communications {
-        margin-bottom: 20px;
+        margin-bottom: 35px;
         width: 100%;
       }
 
@@ -195,11 +274,17 @@
     &__list {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+
+      &--model {
+        margin-left: 14px;
+        margin-right: 18px;
+        justify-content: space-between;
+      }
 
       &--additional {
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin-top: 36px;
       }
 
     }
@@ -207,9 +292,48 @@
     &__list-item {
       margin: 0;
 
+      &--model {
+        align-items: center;
+        padding-top: 85px;
+
+        &:nth-child(4) {
+          margin-right: 11px;
+        }
+
+      }
+
       &--additional {
         margin: 0;
-        width: 50%;
+        margin-bottom: 59px;
+        width: 55%;
+
+        &:nth-child(1) {
+          order: 1;
+        }
+
+        &:nth-child(2) {
+          order: 4;
+          width: 45%;
+        }
+
+        &:nth-child(3) {
+          order: 2;
+          width: 45%;
+        }
+
+        &:nth-child(4) {
+          order: 5;
+        }
+
+        &:nth-child(5) {
+          order: 3;
+        }
+
+        &:nth-child(6) {
+          order: 6;
+          width: 45%;
+        }
+
       }
 
     }

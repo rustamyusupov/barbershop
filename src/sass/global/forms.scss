@@ -7,8 +7,6 @@ input[type='password'] { /* поля */
   box-sizing: border-box;
   outline: none;
   width: 100%;
-  font-size: $font-size-base;
-  line-height: 20px;
   font-family: $base-font;
 
   &:focus {

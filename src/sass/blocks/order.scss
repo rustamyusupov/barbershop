@@ -42,9 +42,23 @@
 
   .order {
 
+    &::after {
+      content: none;
+    }
+
     &__header {
+      @include container;
+
+      align-items: center;
       display: flex;
       justify-content: space-between;
+      margin-bottom: 48px;
+      padding-top: 25px;
+    }
+
+    &__title {
+      font-size: $font-size-extra;
+      text-align: left;
     }
 
   }
