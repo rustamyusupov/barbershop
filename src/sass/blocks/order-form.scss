@@ -1,59 +1,144 @@
 .order-form {
+  @include container;
+
+  padding-bottom: 39px;
   text-align: center;
+
+  &__title {
+    display: block;
+    font-size: $font-size-medium;
+    font-weight: normal;
+    line-height: $line-height-base;
+    text-transform: uppercase;
+  }
 
   &__contacts {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
-
-    outline: 1px dashed blue;
+    margin-bottom: 37px;
   }
 
-  &__name {
-    margin-bottom: 20px;
-  }
-
+  &__name,
   &__communications {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
 
   &__for-master {
-    height: 100px;
+    height: 112px;
+    padding: 8px 18px;
+    resize: none;
   }
 
   &__model {
     text-align: center;
+  }
 
-    outline: 1px dashed blue;
+  &__model &__title {
+    margin-bottom: 50px;
   }
 
   &__additional {
+    margin-bottom: 21px;
     text-align: center;
+  }
 
-    outline: 1px dashed blue;
+  &__additional &__title {
+    margin-bottom: 39px;
+  }
+
+  &__for-master,
+  &__field {
+    color: $color-black;
+    border: 1px solid $color-border-news;
+    line-height: $line-height-medium;
+
+    &::placeholder {
+      color: $color-black;
+    }
+
   }
 
   &__field {
+    padding: 13px 18px;
+    padding-bottom: 15px;
 
     &--name {
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     &--communications {
-      margin-bottom: 10px;
+      margin-bottom: 6px;
       width: 100%;
     }
 
   }
 
+  &__caption {
+    font-weight: normal;
+    position: relative;
+
+    &::before,
+    .order-form__field:checked + &::after {
+      background-color: $color-white;
+      border: 1px solid $color-border-news;
+      content: "";
+      position: absolute;
+    }
+
+    &--model::before {
+      border-radius: 50%;
+      height: 49px;
+      right: 50%;
+      top: -62px;
+      transform: translateX(50%);
+      width: 49px;
+    }
+
+    &--additional::before {
+      bottom: 50%;
+      height: 35px;
+      left: -60px;
+      transform: translateY(50%);
+      width: 35px;
+    }
+
+  }
+
+  &__field--model:checked + &__caption--model::after {
+    border-radius: 50%;
+    height: 17px;
+    right: 50%;
+    top: -46px;
+    transform: translateX(50%);
+    width: 17px;
+  }
+
+  &__field--additional:checked + &__caption--additional::after {
+    background-image: url('../img/sprite.png');
+    background-position: -10px -241px;
+    background-repeat: no-repeat;
+    border: none;
+    height: 16px;
+    left: -52px;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 22px;
+  }
+
+  &__icon {
+    fill: $bg-color-menu-active;
+    padding-top: 14px;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
     padding: 0;
 
     &--additional {
       flex-direction: column;
-      padding-left: 70px;
+      padding-left: 59px;
       text-align: left;
     }
 
@@ -65,12 +150,14 @@
     flex-direction: column;
 
     &--model {
-      padding-left: 25px;
-      padding-top: 70px;
+      margin-bottom: 43px;
+      margin-left: 23px;
+      margin-right: 10px;
+      padding-top: 48px;
     }
 
     &--additional {
-      padding-bottom: 30px;
+      margin-bottom: 32px;
     }
 
   }

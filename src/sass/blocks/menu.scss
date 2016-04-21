@@ -91,7 +91,9 @@
     text-decoration: none;
 
     &::before {
-      background-image: url("../img/login.png");
+      background-image: url("../img/sprite.png");
+      background-position: -10px -205px;
+      background-repeat: no-repeat;
       content: "";
       height: 16px;
       left: 19px;
@@ -128,6 +130,11 @@
       border: none;
       padding: 13px 20px;
       padding-left: 130px;
+
+      &--enroll {
+        padding-left: 118px;
+      }
+
     }
 
     &__wrapper--opened {

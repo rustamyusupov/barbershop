@@ -55,6 +55,13 @@
     padding: 12px 87px;
   }
 
+  &--submit {
+    background-color: $bg-color-menu-active;
+    border: none;
+    color: $color-white;
+    padding: 13px 72px;
+  }
+
 }
 
 @media #{$break-medium} {
