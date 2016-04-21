@@ -33,13 +33,17 @@
   &__title {
     @include title;
 
-    margin-bottom: 21px;
+    margin-bottom: 23px;
   }
 
   &__table {
     display: block;
-    margin-bottom: 11px;
+    margin-bottom: 30px;
     width: 100%;
+
+    tbody {
+      display: block;
+    }
 
     tr {
       display: flex;
@@ -79,7 +83,7 @@
 
   &__discount {
     align-items: center;
-    border: 1px solid $color-border-discount;
+    outline: 1px solid $color-border-discount;
     display: flex;
     justify-content: space-between;
     padding: 16px 0;
@@ -101,10 +105,14 @@
 
   .price-list {
     padding-top: 90px;
-    padding-bottom: 57px;
+    padding-bottom: 59px;
 
     &::after {
       content: none;
+    }
+
+    &__wrapper {
+      @include container;
     }
 
     &__title {
@@ -112,7 +120,7 @@
 
       font-size: $font-size-extra;
       text-align: left;
-      padding-bottom: 54px;
+      padding-bottom: 53px;
     }
 
     &__bracket {
@@ -120,11 +128,13 @@
     }
 
     &__table {
-      @include container;
-
       border-spacing: 0;
       display: table;
-      margin-bottom: 10px;
+      margin-bottom: 11px;
+
+      tbody {
+        display: table-row-group;
+      }
 
       tr {
         display: table-row;
@@ -149,25 +159,28 @@
 
       .col-2 {
         padding: 13px 19px;
-        min-width: 205px;
       }
 
       .col-3 {
         order: 2;
         padding: 13px 19px;
+        padding-left: 18px;
+        padding-right: 5px;
+
         width: auto;
       }
 
       .col-4 {
         order: 3;
         padding: 13px 19px;
-        min-width: 120px;
+        min-width: 105px;
       }
 
     }
 
     &__discount {
       @include container;
+
       padding: 20px 0;
     }
 
@@ -196,8 +209,6 @@
     padding-bottom: 84px;
 
     &__wrapper {
-      @include container;
-
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -215,7 +226,7 @@
       width: 65.6%;
 
       .col-4 {
-        min-width: 105px;
+        min-width: 95px;
       }
 
     }
