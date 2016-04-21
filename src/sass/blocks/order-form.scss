@@ -47,6 +47,7 @@
     font-size: $font-size-base;
     line-height: $line-height-medium;
     padding: 9px 18px;
+    width: 100%;
 
     &::placeholder {
       color: $color-black;
@@ -345,18 +346,90 @@
 @media #{$break-large} {
 
   .order-form {
+    padding-bottom: 87px;
+
+    &__contacts {
+      margin-bottom: 69px;
+    }
 
     &__communications {
       display: flex;
+      justify-content: space-between;
+    }
+
+    &__model &__title {
+      margin-bottom: 45px;
+      padding: 0 40px;
+    }
+
+    &__additional {
+      margin-bottom: 27px;
+    }
+
+    &__additional &__title {
+      padding: 0 44px;
     }
 
     &__field {
 
       &--name {
-        padding-right: 30px;
+        margin-right: 38px;
+        width: 30.7%;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       &--communications {
+        width: 48.2%;
+      }
+
+    }
+
+    &__list {
+
+      &--model {
+        margin-left: 44px;
+        margin-right: 50px;
+      }
+
+      &--additional {
+        //flex-wrap: wrap;
+        //justify-content: flex-start;
+        //margin-top: 36px;
+      }
+
+    }
+
+    &__list-item {
+      margin: 0;
+
+      &--model {
+        align-items: center;
+        padding-top: 85px;
+
+        &:nth-child(4) {
+          margin-right: 11px;
+        }
+
+      }
+
+      &--additional {
+        margin: 0;
+        margin-bottom: 59px;
+
+        &:nth-child(-n+4) {
+          width: 35.5%;
+        }
+
+        &:nth-child(5) {
+          width: 25%;
+        }
+
+        &:nth-child(6) {
+          width: 25%;
+        }
 
       }
 

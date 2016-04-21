@@ -6,7 +6,6 @@ select,
 input[type='password'] { /* поля */
   box-sizing: border-box;
   outline: none;
-  width: 100%;
   font-family: $base-font;
 
   &:focus {

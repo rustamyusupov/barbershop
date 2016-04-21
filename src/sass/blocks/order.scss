@@ -64,3 +64,16 @@
   }
 
 }
+
+@media #{$break-large} {
+
+  .order {
+
+    // TODO: Объединить, если ничего не добавится
+    &__header {
+      padding-top: 20px;
+    }
+
+  }
+
+}
