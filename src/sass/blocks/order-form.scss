@@ -49,6 +49,9 @@
     padding: 9px 18px;
     width: 100%;
 
+    // TODO: Почему для IE контент меньше 30?
+    height: 50px;
+
     &::placeholder {
       color: $color-black;
     }
@@ -245,6 +248,9 @@
       font-size: $font-size-large;
       line-height: $line-height-medium;
       padding: 19px 24px;
+
+      // TODO: Почему для IE контент меньше 30?
+      height: auto;
     }
 
     &__for-master {

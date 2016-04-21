@@ -59,7 +59,8 @@
     background-color: $bg-color-menu-active;
     border: none;
     color: $color-white;
-    padding: 13px 72px;
+    padding: 13px 0;
+    width: 100%;
   }
 
 }
@@ -102,7 +103,7 @@
 
     &--submit {
       font-size: $font-size-large;
-      padding: 23px 230px;
+      padding: 23px 0;
     }
 
   }
@@ -123,7 +124,7 @@
     }
 
     &--submit {
-      padding: 23px 390px;
+      padding: 23px 0;
     }
 
   }
