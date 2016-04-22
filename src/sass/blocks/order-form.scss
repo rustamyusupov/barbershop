@@ -316,6 +316,7 @@
 
         &:nth-child(1) {
           order: 1;
+          width: 55%;
         }
 
         &:nth-child(2) {
@@ -330,10 +331,12 @@
 
         &:nth-child(4) {
           order: 5;
+          width: 55%;
         }
 
         &:nth-child(5) {
           order: 3;
+          width: 55%;
         }
 
         &:nth-child(6) {
@@ -400,12 +403,6 @@
         margin-right: 50px;
       }
 
-      &--additional {
-        //flex-wrap: wrap;
-        //justify-content: flex-start;
-        //margin-top: 36px;
-      }
-
     }
 
     &__list-item {
@@ -424,6 +421,7 @@
       &--additional {
         margin: 0;
         margin-bottom: 59px;
+        width: 35.5%;
 
         &:nth-child(-n+4) {
           width: 35.5%;
