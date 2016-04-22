@@ -1,7 +1,8 @@
 .btn {
-  color: $color-black;
+  background-color: $bg-color-button;
   border: 1px solid $color-border-news;
   box-sizing: border-box;
+  color: $color-black;
   cursor: pointer;
   display: inline-block;
   font-size: $font-size-base;
@@ -46,6 +47,7 @@
 
   &--contacts,
   &--copyright {
+    background-color: $bg-color;
     border-color: $color-border-footer;
     color: $color-white;
     padding: 12px 60px;
