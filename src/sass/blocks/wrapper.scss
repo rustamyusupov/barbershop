@@ -1,5 +1,6 @@
 .wrapper {
   margin: 0 auto;
+  position: relative;
   width: 320px;
 
   @media #{$break-medium} {

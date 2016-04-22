@@ -65,6 +65,19 @@
     width: 100%;
   }
 
+  &--log-in {
+    background-color: $bg-color-menu-active;
+    border: none;
+    color: $color-white;
+    padding: 12px 0;
+    width: 46.3%;
+  }
+
+  &--close {
+    padding: 12px 0;
+    width: 46.3%;
+  }
+
 }
 
 @media #{$break-medium} {
@@ -106,6 +119,45 @@
     &--submit {
       font-size: $font-size-large;
       padding: 23px 0;
+    }
+
+    &--log-in {
+      padding: 13px 0;
+      width: 100%;
+    }
+
+    &--close {
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 0;
+      height: 28px;
+      outline: 0;
+      position: absolute;
+      right: -103px;
+      top: 60px;
+      width: 28px;
+
+      &::before,
+      &::after {
+        background-color: #ffffff;
+        bottom: 50%;
+        content: "";
+        cursor: pointer;
+        height: 2px;
+        position: absolute;
+        left: -4px;
+        width: 36px;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
     }
 
   }

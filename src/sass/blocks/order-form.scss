@@ -117,8 +117,7 @@
   }
 
   &__field--additional:checked + &__caption--additional::after {
-    background-image: url('../img/sprite.png');
-    background-position: -10px -241px;
+    background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
     border: none;
     height: 16px;

@@ -162,26 +162,28 @@
     </section>
 
 
-    <div class="modal-personal">
+    <div class="modal-personal modal-personal--show">
       <header class="modal-personal__header">
         <b class="modal-personal__title">Личный кабинет</b>
         <p class="modal-personal__text">Введите свой логин и пароль, чтобы войти</p>
       </header>
 
-      <form class="modal-login" action="#" method="post">
-        <div class="modal-login__user">
-          <input type="text" class="modal-login__user-login" placeholder="Логин">
-          <input type="text" class="modal-login__user-password" placeholder="Пароль">
+      <form class="modal-personal__form" action="#" method="post">
+        <div class="modal-personal__user">
+          <input class="modal-personal__field" type="text" id="login" placeholder="Логин">
+          <div class="modal-personal__caption modal-personal__caption--login">Логин</div>
+          <input class="modal-personal__field modal-personal__field--password" type="text" id="password" placeholder="Пароль">
+          <div class="modal-personal__caption modal-personal__caption--password" >Пароль</div>
         </div>
 
-        <div class="modal-login__settings">
-          <input class="modal-login__field" type="checkbox" name="remember" id="remember">
-          <label class="modal-login__caption" for="remember">Запомните меня</label>
-          <a class="modal-login__foggot" href="#">Я забыл пароль</a>
+        <div class="modal-personal__settings">
+          <input class="modal-personal__field modal-personal__field--remember" type="checkbox" name="remember" id="remember">
+          <label class="modal-personal__caption modal-personal__caption--remember" for="remember">Запомните меня</label>
+          <a class="modal-personal__foggot" href="#">Я забыл пароль!</a>
         </div>
 
-        <button class="btn btn--submit" type="submit">Войти</button>
-        <button class="btn" type="button">Закрыть</button>
+        <button class="btn btn--log-in" type="submit">Войти<span class="modal-personal__in-personal"> в личный кабинет</span></button>
+        <button class="btn btn--close" type="button">Закрыть</button>
       </form>
     </div>
 
