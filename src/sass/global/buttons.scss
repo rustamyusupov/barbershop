@@ -57,7 +57,8 @@
     padding: 12px 87px;
   }
 
-  &--submit {
+  &--submit,
+  &--modal-form {
     background-color: $bg-color-menu-active;
     border: none;
     color: $color-white;
@@ -76,6 +77,10 @@
   &--close {
     padding: 12px 0;
     width: 46.3%;
+  }
+
+  &--modal-form {
+    width: 180px;
   }
 
 }
@@ -158,6 +163,14 @@
         transform: rotate(-45deg);
       }
 
+    }
+
+    &--modal-form-sucess {
+      width: 320px;
+    }
+
+    &--modal-form-failure {
+      width: 148px;
     }
 
   }

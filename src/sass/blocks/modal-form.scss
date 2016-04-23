@@ -1,3 +1,77 @@
 .modal-form {
+  background-color: $color-white;
+  bottom: 530px;
+  box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.75);
   display: none;
+  height: 317px;
+  left: 0;
+  position: absolute;
+  width: 320px;
+  z-index: 10;
+
+  &--show {
+    display: block;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    width: 280px;
+  }
+
+  &__title {
+    display: block;
+    font-size: $font-size-extra;
+    line-height: $line-height-medium;
+    margin-bottom: 19px;
+    margin-top: 58px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: $font-size-base;
+    margin: 0;
+    margin-bottom: 32px;
+
+    &--failure {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+  }
+
+}
+
+@media #{$break-medium} {
+
+  .modal-form {
+    bottom: 359px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--success {
+      width: 460px;
+    }
+
+    &__wrapper--success {
+      margin: 0 auto;
+      text-align: center;
+      width: 320px;
+    }
+
+    &__text--success {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+  }
+
+}
+
+@media #{$break-large} {
+
+  .modal-form {
+    bottom: 235px;
+  }
+
 }
