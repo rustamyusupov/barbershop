@@ -43,6 +43,12 @@
     width: 36px;
   }
 
+  &--vk:active::after,
+  &--fb:active::after,
+  &--ig:active::after {
+    opacity: 0.3;
+  }
+
 }
 
 @media #{$break-large} {

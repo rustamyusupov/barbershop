@@ -41,6 +41,7 @@
 
     background-color: $bg-color-menu;
     color: $color-white;
+    cursor: pointer;
     font-size: $font-size-small;
     height: 50px;
     left: 0;
@@ -55,6 +56,43 @@
       bottom: -10px;
     }
 
+    &:hover {
+      background-color: $color-news-text-hover;
+    }
+
+    &:hover::after {
+      background-image:
+        linear-gradient(
+          to top right,
+          transparent 50%,
+          $color-news-text-hover 50%
+        ),
+        linear-gradient(
+          to top left,
+          transparent 50%,
+          $color-news-text-hover 50%
+        );
+    }
+
+    &:active {
+      background-color: $color-news-text-active;
+      color: $color-menu-mobile-hover;
+    }
+
+    &:active::after {
+      background-image:
+        linear-gradient(
+          to top right,
+          transparent 50%,
+          $color-news-text-active 50%
+        ),
+        linear-gradient(
+          to top left,
+          transparent 50%,
+          $color-news-text-active 50%
+        );
+    }
+
   }
 
   &__date-big {
@@ -65,10 +103,23 @@
     padding-top: 5px;
   }
 
-  &__text {
+  &__link {
+    color: $color-black;
+    display: block;
     font-size: $font-size-base;
     margin: 0;
     padding-left: 69px;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-news-text-hover;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $color-news-text-active;
+    }
+
   }
 
 }
@@ -98,7 +149,7 @@
       width: 50%;
     }
 
-    &__text {
+    &__link {
       padding-right: 27px;
     }
 
@@ -130,7 +181,7 @@
 
     }
 
-    &__text {
+    &__link {
       padding-right: 30px;
     }
 

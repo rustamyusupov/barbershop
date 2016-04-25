@@ -14,27 +14,13 @@
   text-transform: uppercase;
   vertical-align: top;
 
-  &:hover,
-  &--hover {
-
+  &:hover {
+    border-color: $color-button-border-hover;
   }
 
-  &:active,
-  &--active {
-
-  }
-
-  &--modify {
-
-    &:hover,
-    &--hover {
-
-    }
-
-    &:active,
-    &--active {
-
-    }
+  &:active {
+    background-color: $color-button-bg-active;
+    color: $color-button-text-active;
   }
 
   &--to-main {
@@ -51,6 +37,17 @@
     border-color: $color-border-footer;
     color: $color-white;
     padding: 12px 60px;
+
+    &:hover {
+      border-color: $color-button-contact-border-hover;
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: transparent;
+      color: $color-button-text-active;
+    }
+
   }
 
   &--copyright {
@@ -64,6 +61,36 @@
     color: $color-white;
     padding: 13px 0;
     width: 100%;
+
+    &:hover {
+      background-color: $color-news-text-active;
+    }
+
+    &:active {
+      color: $color-menu-mobile-hover;
+    }
+
+  }
+
+  @keyframes change-color {
+
+    0% {
+      color: rgba(255, 255, 255, 1);
+    }
+    50% {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    100% {
+      color: rgba(255, 255, 255, 1);
+    }
+
+  }
+
+  &--in-progress {
+    animation-iteration-count: infinite;
+    animation-name: change-color;
+    animation-duration: 2s;
+    background-color: $color-button-bg-progress;
   }
 
   &--log-in {
@@ -119,6 +146,15 @@
 
     &--copyright {
       padding: 12px 26px;
+    }
+
+    &--contacts {
+      cursor: default;
+
+      &:active {
+        color: $color-white;
+      }
+
     }
 
     &--submit {

@@ -12,6 +12,7 @@
     right: 0;
     top: 0;
     width: 70px;
+    z-index: 10;
 
     &--closed::after,
     &--opened::before,
@@ -31,6 +32,11 @@
       top: 15px;
     }
 
+    &--closed:active::after {
+      box-shadow: 0 8px 0 0 $color-menu-mobile-hover,
+                  0 16px 0 0 $color-menu-mobile-hover;
+    }
+
     &--opened {
       left: 0;
       right: auto;
@@ -48,6 +54,12 @@
       &::after {
         transform: rotate(-45deg);
       }
+    }
+
+    &--closed:active::after,
+    &--opened:active::before,
+    &--opened:active::after {
+      background-color: $color-menu-mobile-hover;
     }
 
   }
@@ -72,8 +84,17 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    &:active {
+      color: $color-menu-mobile-hover;
+    }
+
     &--active {
       cursor: default;
+
+      &:active {
+        color: $color-white;
+      }
+
     }
 
   }
@@ -101,6 +122,11 @@
       top: 17px;
       width: 16px;
     }
+
+    &:active {
+      color: $color-menu-mobile-hover;
+    }
+
   }
 
 }
@@ -206,14 +232,31 @@
       text-decoration: none;
       text-transform: uppercase;
 
-      &--active::after {
-        border-bottom: 3px solid $bg-color-menu-active;
-        bottom: -2px;
-        content: "";
-        height: 3px;
-        left: 0;
-        position: absolute;
-        right: 0;
+      &:hover {
+        color: $color-news-text-hover;
+      }
+
+      &:active {
+        color: $color-menu-tablet-active;
+      }
+
+      &--active {
+
+        &::after {
+          border-bottom: 3px solid $bg-color-menu-active;
+          bottom: -2px;
+          content: "";
+          height: 3px;
+          left: 0;
+          position: absolute;
+          right: 0;
+        }
+
+        &:hover,
+        &:active {
+          color: $color-white;
+        }
+
       }
 
     }
@@ -222,8 +265,17 @@
       font-size: 0;
     }
 
-    &__login::before {
-        top: 29px;
+    &__login {
+
+      &::before {
+          top: 29px;
+      }
+
+      // TODO: Почему не меняет цвет?
+      &:hover::before {
+        color: $color-news-text-hover;
+      }
+
     }
 
   }
@@ -234,12 +286,8 @@
 
   .menu {
 
-    &__wrapper {
-      margin-left: 31px;
-    }
-
     &__item {
-      margin-right: 65px;
+      margin-right: 0;
     }
 
     &__user {
@@ -247,6 +295,39 @@
       font-weight: bold;
       margin-right: 11px;
       text-transform: uppercase;
+    }
+
+    &__link {
+      padding-left: 32px;
+      padding-right: 32px;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-black;
+      }
+
+      &:active {
+        color: $color-menu-desktop-active;
+      }
+
+      &--active {
+
+        &::after {
+          left: 32px;
+          right: 32px;
+        }
+
+        &:hover {
+          background-color: $color-black;
+          color: $color-white;
+        }
+
+        &:active {
+          color: $color-white;
+        }
+
+      }
+
     }
 
     &__login {
@@ -257,6 +338,21 @@
         left: 11px;
         top: 28px;
       }
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-black;
+
+        // TODO: Как изменить цвет?
+        &::before {
+          color: $color-menu-desktop-active;
+        }
+      }
+
+      &:active {
+        color: $color-menu-desktop-active;
+      }
+
     }
   }
 
