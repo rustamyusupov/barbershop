@@ -99,6 +99,15 @@
     color: $color-white;
     padding: 12px 0;
     width: 46.3%;
+
+    &:hover {
+      background-color: $color-news-text-active;
+    }
+
+    &:active {
+      color: $color-menu-mobile-hover;
+    }
+
   }
 
   &--close {
@@ -179,6 +188,10 @@
       top: 60px;
       width: 28px;
 
+      &:active {
+        background-color: transparent;
+      }
+
       &::before,
       &::after {
         background-color: #ffffff;
@@ -189,6 +202,11 @@
         position: absolute;
         left: -4px;
         width: 36px;
+      }
+
+      &:active::before,
+      &:active::after {
+        background-color: $color-menu-mobile-hover;
       }
 
       &::before {
