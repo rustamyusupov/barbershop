@@ -24,12 +24,12 @@
     }
 
     &__header {
-      @include container;
+      @include container-fluid();
 
       align-items: center;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 48px;
+      padding-bottom: 48px;
       padding-top: 25px;
     }
 
@@ -44,13 +44,8 @@
 
 @media #{$break-large} {
 
-  .order {
-
-    // TODO: Объединить, если ничего не добавится
-    &__header {
-      padding-top: 20px;
-    }
-
+  .order__header {
+    padding-top: 20px;
   }
 
 }
