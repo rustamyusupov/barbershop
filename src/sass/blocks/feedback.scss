@@ -6,7 +6,8 @@
 
   @include triangle($bg-color-news);
 
-  &__header-title {
+  &__header {
+    @include container-fluid;
     @include title;
 
     margin: 0;
@@ -73,6 +74,7 @@
 @media #{$break-medium} {
 
   .feedback {
+    padding: 0 64px;
     padding-bottom: 71px;
     padding-top: 45px;
     position: relative;
@@ -81,13 +83,12 @@
       content: none;
     }
 
-    &__header-title {
-      @include container;
-
+    &__header {
       font-size: $font-size-extra;
       line-height: $line-height-medium;
       padding-bottom: 48px;
       text-align: left;
+      width: 100%;
     }
 
     &__items {
@@ -96,7 +97,8 @@
 
     &__item {
       border: 1px solid $color-border-news;
-      margin: 0 113px;
+      //margin: 0;
+      margin: 0 49px;
       min-height: 128px;
       padding-left: 141px;
       padding-top: 30px;
@@ -149,7 +151,7 @@
       }
 
       &--prev {
-        left: 64px;
+        left: 0;
 
         &::after {
           border-right: 12px solid $color-black;
@@ -162,7 +164,7 @@
       }
 
       &--next {
-        right: 64px;
+        right: 0;
 
         &::after {
           border-left: 12px solid $color-black;
@@ -185,8 +187,8 @@
   .feedback {
     padding-bottom: 98px;
 
-    &__header-title {
-      padding-left: 142px;
+    &__header {
+      margin-left: 127px;
     }
 
     &__items {
@@ -211,11 +213,11 @@
     &__toggle {
 
       &--prev {
-        left: 120px;
+        left: 56px;
       }
 
       &--next {
-        right: 120px;
+        right: 56px;
       }
 
     }

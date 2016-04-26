@@ -1,14 +1,15 @@
 .wrapper {
-  margin: 0 auto;
-  position: relative;
-  width: 320px;
-
-  @media #{$break-medium} {
-    width: 768px;
-  }
-
-  @media #{$break-large} {
-    width: 1200px;
-  }
+  // margin: 0 auto;
+  // position: relative;
+  // //width: 320px;
+  // width: auto;
+  //
+  // @media #{$break-medium} {
+  //   //width: 768px;
+  // }
+  //
+  // @media #{$break-large} {
+  //   //width: 1200px;
+  // }
 
 }

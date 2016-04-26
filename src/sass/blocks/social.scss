@@ -27,6 +27,7 @@
 
   .social {
     flex-wrap: wrap;
+    margin-right: 220px;
     order: 2;
     padding-top: 50px;
     text-align: center;
@@ -36,7 +37,7 @@
       display: block;
       font-size: $font-size-base;
       line-height: $line-height-base;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       width: 100%;
     }
 

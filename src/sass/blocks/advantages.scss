@@ -1,9 +1,11 @@
 .advantages  {
   @include triangle;
 
-  display: flex;
-  flex-direction: column;
   position: relative;
+
+  &__wrapper {
+    @include container-fluid;
+  }
 
   &__item {
     align-items: center;
@@ -92,7 +94,6 @@
 @media #{$break-medium} {
 
   .advantages  {
-    padding: 0 64px;
     padding-bottom: 7px;
 
     &::after {
@@ -147,10 +148,15 @@
 @media #{$break-large} {
 
   .advantages  {
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 120px;
+    padding: 0;
     padding-top: 78px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     &::after {
       bottom: -62px;
@@ -162,7 +168,7 @@
       padding-bottom: 40px;
       padding-top: 120px;
       text-align: center;
-      width: 40%;
+      width: 25%;
 
       &::before {
         left: auto;

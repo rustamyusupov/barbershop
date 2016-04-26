@@ -13,10 +13,10 @@
 @media #{$break-medium} {
 
   .copyright {
+    max-width: 160px;
     order: 2;
     padding-bottom: 50px;
     padding-top: 30px;
-    width: 25%;
   }
 
 }

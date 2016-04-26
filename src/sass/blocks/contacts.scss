@@ -1,6 +1,5 @@
 .contacts {
-  @include container;
-
+  padding: 0 19px;
   padding-bottom: 25px;
   padding-top: 31px;
   text-align: center;
@@ -29,10 +28,10 @@
 
   .contacts {
     order: 1;
+    padding: 0;
     padding-bottom: 41px;
     padding-top: 50px;
     text-align: left;
-    width: 75%;
 
     &__title {
       text-transform: uppercase;

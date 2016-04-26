@@ -16,15 +16,17 @@
   }
 
   &__item {
-    @include container;
-    margin: 0;
+    @include container-fluid;
 
     border-bottom: 1px solid $color-border-news;
+    margin: 0 19px;
+    min-height: 70px;
     padding-bottom: 18px;
+    padding-left: 70px;
     padding-top: 16px;
     position: relative;
 
-    &:nth-of-type(n+2) {
+    &:nth-of-type(2) {
       border: none;
       // TODO: Как сделать у последнего?
       margin-bottom: 5px;
@@ -108,7 +110,6 @@
     display: block;
     font-size: $font-size-base;
     margin: 0;
-    padding-left: 69px;
     text-decoration: none;
 
     &:hover {
@@ -142,7 +143,9 @@
     }
 
     &__item {
+      box-sizing: border-box;
       border: none;
+      display: inline-block;
       margin: 0;
       margin-bottom: 17px;
       margin-top: 31px;

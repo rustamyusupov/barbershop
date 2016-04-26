@@ -7,11 +7,12 @@
 @media #{$break-medium} {
 
   .footer {
-    @include container;
+    @include container-fluid;
 
     border: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
 }
