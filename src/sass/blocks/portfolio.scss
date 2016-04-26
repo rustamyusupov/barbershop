@@ -196,7 +196,7 @@
     }
 
     &__header {
-      @include container;
+      @include container-fluid();
 
       align-items: center;
       display: flex;
@@ -210,7 +210,8 @@
     }
 
     &__items {
-      @include container;
+      @include container-fluid();
+
       padding-bottom: 20px;
 
       &::after {
@@ -220,10 +221,9 @@
     }
 
     &__item {
-
-
       display: flex;
       margin-bottom: 41px;
+      width: auto;
 
       &--month::before,
       &--month::after {
@@ -340,7 +340,8 @@
     }
 
     &__items {
-      @include container;
+      @include container-fluid();
+
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
