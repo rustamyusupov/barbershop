@@ -27,10 +27,17 @@
 
   &__model {
     text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
 
   &__model &__title {
     margin-bottom: 50px;
+
+    width: 100%;
   }
 
   &__additional {
@@ -156,13 +163,11 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    //justify-content: space-between;
     margin: 0;
     padding: 0;
 
     &--additional {
-      flex-direction: column;
-      padding-left: 59px;
       text-align: left;
     }
 
@@ -182,6 +187,8 @@
 
     &--additional {
       margin-bottom: 32px;
+      padding-left: 59px;
+      width: 150px;
     }
 
   }
@@ -209,6 +216,9 @@
 
     &__model {
       margin-bottom: 54px;
+
+      display: block;
+      width: auto;
     }
 
     &__model::before,
@@ -226,6 +236,8 @@
     &__model &__title {
       margin-bottom: 39px;
       padding: 0 25px;
+
+      width: auto;
     }
 
     &__additional {
@@ -314,6 +326,7 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         margin-top: 36px;
+        padding-left: 60px;
       }
 
     }
@@ -334,6 +347,7 @@
       &--additional {
         margin: 0;
         margin-bottom: 59px;
+        padding: 0;
         width: 55%;
 
         &:nth-child(1) {
