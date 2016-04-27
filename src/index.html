@@ -21,209 +21,207 @@
     </symbol>
   </svg>
 
-  <div class="wrapper">
 
-    <header class="header">
-      <nav class="menu">
-        <div class="menu__toggle menu__toggle--closed">Открыть</div>
+  <header class="header">
+    <nav class="menu">
+      <div class="menu__toggle menu__toggle--closed">Открыть</div>
 
-        <div class="menu__wrapper menu__wrapper--closed">
-          <ul class="menu__list">
-            <li class="menu__item menu__item--show"><a class="menu__link menu__link--active">Главная</a></li>
-            <li class="menu__item"><a href="photo.html" class="menu__link">Наши работы</a></li>
-            <li class="menu__item"><a href="form.html" class="menu__link">Записаться</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a></li>
-          </ul>
+      <div class="menu__wrapper menu__wrapper--closed">
+        <ul class="menu__list">
+          <li class="menu__item menu__item--show"><a class="menu__link menu__link--active">Главная</a></li>
+          <li class="menu__item"><a href="photo.html" class="menu__link">Наши работы</a></li>
+          <li class="menu__item"><a href="form.html" class="menu__link">Записаться</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a></li>
+        </ul>
 
-          <div class="menu__user">
-            <a href="#" class="menu__login">Вход</a>
-          </div>
+        <div class="menu__user">
+          <a href="#" class="menu__login">Вход</a>
         </div>
-      </nav>
-
-      <div class="logo">
-        <a class="logo__link">
-          <svg class="logo__image"  width="230" height="85"><use xlink:href="#logo"/></svg>
-        </a>
       </div>
+    </nav>
+
+    <div class="logo">
+      <a class="logo__link">
+        <svg class="logo__image"  width="230" height="85"><use xlink:href="#logo"/></svg>
+      </a>
+    </div>
+  </header>
+
+
+  <section class="prices">
+    <header class="prices__header">
+      <b class="prices__title">Стрижка у нас это выгодно!</b>
+      <p class="prices__text">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
     </header>
 
+    <table class="prices__list">
+      <tr>
+        <td class="prices__value">1&nbsp;500<sup>*</sup></td>
+        <td class="prices__field">рублей<br> вложений</td>
+      </tr>
+      <tr>
+        <td class="prices__value">7&nbsp;200</td>
+        <td class="prices__field">секунд<br> времени мастера</td>
+      </tr>
+      <tr>
+        <td class="prices__value">90&nbsp;000</td>
+        <td class="prices__field">постриженных<br> волос</td>
+      </tr>
+      <tr>
+        <td class="prices__value">500&nbsp;000<sup>*</sup></td>
+        <td class="prices__field">лайков и<br> комплиментов</td>
+      </tr>
+    </table>
 
-    <section class="prices">
-      <header class="prices__header">
-        <b class="prices__title">Стрижка у нас это выгодно!</b>
-        <p class="prices__text">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
-      </header>
+    <div class="prices__note">
+      <sup>*</sup> — приведенные данные ложь
+    </div>
+  </section>
 
-      <table class="prices__list">
-        <tr>
-          <td class="prices__value">1&nbsp;500<sup>*</sup></td>
-          <td class="prices__field">рублей<br> вложений</td>
-        </tr>
-        <tr>
-          <td class="prices__value">7&nbsp;200</td>
-          <td class="prices__field">секунд<br> времени мастера</td>
-        </tr>
-        <tr>
-          <td class="prices__value">90&nbsp;000</td>
-          <td class="prices__field">постриженных<br> волос</td>
-        </tr>
-        <tr>
-          <td class="prices__value">500&nbsp;000<sup>*</sup></td>
-          <td class="prices__field">лайков и<br> комплиментов</td>
-        </tr>
-      </table>
 
-      <div class="prices__note">
-        <sup>*</sup> — приведенные данные ложь
+  <section class="advantages">
+    <div class="advantages__wrapper">
+
+      <input class="slider__selector" type="radio" name="advantages" id="advantages-1" checked>
+      <input class="slider__selector" type="radio" name="advantages" id="advantages-2">
+      <input class="slider__selector" type="radio" name="advantages" id="advantages-3">
+
+      <div class="advantages__item advantages__item--fast">
+        <b class="advantages__title">Быстро</b>
+        <p class="advantages__text">Мы делаем свою работу быстро! Два часа пролетят незаметно и&nbsp;Вы — счастливый обладатель стильной стрижки-минутки.</p>
+      </div>
+
+      <div class="advantages__item advantages__item--cool">
+        <b class="advantages__title">Круто</b>
+        <p class="advantages__text">Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино. Во&nbsp;всяком случае внешне.</p>
+      </div>
+
+      <div class="advantages__item advantages__item--expensive">
+        <b class="advantages__title">Дорого</b>
+        <p class="advantages__text">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена&nbsp;не даёт определённый статус?</p>
+      </div>
+
+      <div class="slider slider--advantages">
+        <label class="slider__btn slider__btn--active" for="advantages-1"></label>
+        <label class="slider__btn" for="advantages-2"></label>
+        <label class="slider__btn" for="advantages-3"></label>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="news">
+    <h2 class="news__title">Новости и акции</h2>
+
+    <article class="news__item">
+      <time class="news__date" datetime="2016-09-29"><span class="news__date-big">29</span> сент</time>
+      <a class="news__link" href="#">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</a>
+    </article>
+
+    <article class="news__item">
+      <time class="news__date" datetime="2016-09-19"><span class="news__date-big">19</span> сент</time>
+      <a class="news__link" href="#">В нашей команде пополнение, Борис «Бритва» Стригунец, <span class="news__only-mobile">обладатель множества титулов и наград</span> пополнил наши стройные ряды. Спешите записаться!</a>
+    </article>
+
+    <article class="news__item">
+      <time class="news__date" datetime="2016-09-09"><span class="news__date-big">9</span> сент</time>
+      <a class="news__link" href="#">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</a>
+    </article>
+
+    <a class="btn btn--news" href="#">Показать все</a>
+  </section>
+
+
+  <section class="feedback">
+    <h2 class="feedback__header">Отзывы о нас</h2>
+
+    <div class="feedback__items">
+      <input class="slider__selector" type="radio" name="feedback" id="feedback-1" checked>
+      <input class="slider__selector" type="radio" name="feedback" id="feedback-2">
+      <input class="slider__selector" type="radio" name="feedback" id="feedback-3">
+
+      <div class="feedback__item feedback__item--travis">
+        <img class="feedback__image" src="img/travis.jpg" width="48" height="46" alt="Трэвис Баркер">
+        <b class="feedback__title">Трэвис Баркер</b>
+        <p class="feedback__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+      </div>
+
+      <div class="feedback__item feedback__item--john">
+        <img class="feedback__image" src="img/travis.jpg" width="48" height="46" alt="Джон Смит">
+        <b class="feedback__title">Джон Смит</b>
+        <p class="feedback__text">Отличную стрижку мне сделали ребята.</p>
+      </div>
+
+      <div class="feedback__item feedback__item--ivan">
+        <img class="feedback__image" src="img/travis.jpg" width="48" height="46" alt="Иван Бородайло">
+        <b class="feedback__title">Иван Бородайло</b>
+        <p class="feedback__text">В Бородинском ваша борода в надёжных руках!</p>
+      </div>
+
+      <button class="feedback__toggle feedback__toggle--prev"  type="button">Предыдущий</button>
+      <button class="feedback__toggle feedback__toggle--next"  type="button">Следующий</button>
+
+      <div class="slider slider--feedback">
+        <label class="slider__btn slider__btn--feedback" for="feedback-1"></label>
+        <label class="slider__btn slider__btn--feedback" for="feedback-2"></label>
+        <label class="slider__btn slider__btn--feedback" for="feedback-3"></label>
+      </div>
+    </div>
+
+    <a class="btn btn--feedback" href="#">Оставить свой</a>
+  </section>
+
+
+  <section class="modal-personal">
+    <header class="modal-personal__header">
+      <b class="modal-personal__title">Личный кабинет</b>
+      <p class="modal-personal__text">Введите свой логин и пароль, чтобы войти</p>
+    </header>
+
+    <form class="modal-personal__form" action="#" method="post">
+      <div class="modal-personal__user">
+        <input class="modal-personal__field" type="text" id="login" placeholder="Логин">
+        <div class="modal-personal__caption modal-personal__caption--login">Логин</div>
+        <input class="modal-personal__field modal-personal__field--password" type="text" id="password" placeholder="Пароль">
+        <div class="modal-personal__caption modal-personal__caption--password" >Пароль</div>
+      </div>
+
+      <div class="modal-personal__settings">
+        <input class="modal-personal__field modal-personal__field--remember" type="checkbox" name="remember" id="remember">
+        <label class="modal-personal__caption modal-personal__caption--remember" for="remember">Запомните меня</label>
+        <a class="modal-personal__foggot" href="#">Я забыл пароль!</a>
+      </div>
+
+      <button class="btn btn--log-in" type="submit">Войти<span class="modal-personal__in-personal"> в личный кабинет</span></button>
+      <button class="btn btn--close" type="button">Закрыть</button>
+    </form>
+  </section>
+
+
+  <footer class="footer">
+    <section class="contacts">
+      <b class="contacts__title">Барбершоп Бородинский</b>
+      <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+      <a class="btn btn--contacts" href="tel:+78125556666"><span class="contacts__tel">Тел.: </span>+7 (812) 555-66-66</a>
+    </section>
+
+    <section class="social">
+      <b class="social__title">Давайте дружить!</b>
+      <div class="social__icons">
+        <a class="social-btn social-btn--vk" href="#">VK</a>
+        <a class="social-btn social-btn--fb" href="#">Facebook</a>
+        <a class="social-btn social-btn--ig" href="#">Instagram</a>
       </div>
     </section>
 
-
-    <section class="advantages">
-      <div class="advantages__wrapper">
-
-        <input class="slider__selector" type="radio" name="advantages" id="advantages-1" checked>
-        <input class="slider__selector" type="radio" name="advantages" id="advantages-2">
-        <input class="slider__selector" type="radio" name="advantages" id="advantages-3">
-
-        <div class="advantages__item advantages__item--fast">
-          <b class="advantages__title">Быстро</b>
-          <p class="advantages__text">Мы делаем свою работу быстро! Два часа пролетят незаметно и&nbsp;Вы — счастливый обладатель стильной стрижки-минутки.</p>
-        </div>
-
-        <div class="advantages__item advantages__item--cool">
-          <b class="advantages__title">Круто</b>
-          <p class="advantages__text">Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино. Во&nbsp;всяком случае внешне.</p>
-        </div>
-
-        <div class="advantages__item advantages__item--expensive">
-          <b class="advantages__title">Дорого</b>
-          <p class="advantages__text">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена&nbsp;не даёт определённый статус?</p>
-        </div>
-
-        <div class="slider slider--advantages">
-          <label class="slider__btn slider__btn--active" for="advantages-1"></label>
-          <label class="slider__btn" for="advantages-2"></label>
-          <label class="slider__btn" for="advantages-3"></label>
-        </div>
-
-      </div>
+    <section class="copyright">
+      <p class="copyright__title">Разработано:</p>
+      <a class="btn btn--copyright" href="#">HTML Academy</a>
     </section>
+  </footer>
 
-
-    <section class="news">
-      <h2 class="news__title">Новости и акции</h2>
-
-      <article class="news__item">
-        <time class="news__date" datetime="2016-09-29"><span class="news__date-big">29</span> сент</time>
-        <a class="news__link" href="#">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</a>
-      </article>
-
-      <article class="news__item">
-        <time class="news__date" datetime="2016-09-19"><span class="news__date-big">19</span> сент</time>
-        <a class="news__link" href="#">В нашей команде пополнение, Борис «Бритва» Стригунец, <span class="news__only-mobile">обладатель множества титулов и наград</span> пополнил наши стройные ряды. Спешите записаться!</a>
-      </article>
-
-      <article class="news__item">
-        <time class="news__date" datetime="2016-09-09"><span class="news__date-big">9</span> сент</time>
-        <a class="news__link" href="#">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</a>
-      </article>
-
-      <a class="btn btn--news" href="#">Показать все</a>
-    </section>
-
-
-    <section class="feedback">
-      <h2 class="feedback__header">Отзывы о нас</h2>
-
-      <div class="feedback__items">
-        <input class="slider__selector" type="radio" name="feedback" id="feedback-1" checked>
-        <input class="slider__selector" type="radio" name="feedback" id="feedback-2">
-        <input class="slider__selector" type="radio" name="feedback" id="feedback-3">
-
-        <div class="feedback__item feedback__item--travis">
-          <img class="feedback__image" src="img/travis.jpg" width="48" height="46" alt="Трэвис Баркер">
-          <b class="feedback__title">Трэвис Баркер</b>
-          <p class="feedback__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
-        </div>
-
-        <div class="feedback__item feedback__item--john">
-          <img class="feedback__image" src="img/travis.jpg" width="48" height="46" alt="Джон Смит">
-          <b class="feedback__title">Джон Смит</b>
-          <p class="feedback__text">Отличную стрижку мне сделали ребята.</p>
-        </div>
-
-        <div class="feedback__item feedback__item--ivan">
-          <img class="feedback__image" src="img/travis.jpg" width="48" height="46" alt="Иван Бородайло">
-          <b class="feedback__title">Иван Бородайло</b>
-          <p class="feedback__text">В Бородинском ваша борода в надёжных руках!</p>
-        </div>
-
-        <button class="feedback__toggle feedback__toggle--prev"  type="button">Предыдущий</button>
-        <button class="feedback__toggle feedback__toggle--next"  type="button">Следующий</button>
-
-        <div class="slider slider--feedback">
-          <label class="slider__btn slider__btn--feedback" for="feedback-1"></label>
-          <label class="slider__btn slider__btn--feedback" for="feedback-2"></label>
-          <label class="slider__btn slider__btn--feedback" for="feedback-3"></label>
-        </div>
-      </div>
-
-      <a class="btn btn--feedback" href="#">Оставить свой</a>
-    </section>
-
-
-    <section class="modal-personal">
-      <header class="modal-personal__header">
-        <b class="modal-personal__title">Личный кабинет</b>
-        <p class="modal-personal__text">Введите свой логин и пароль, чтобы войти</p>
-      </header>
-
-      <form class="modal-personal__form" action="#" method="post">
-        <div class="modal-personal__user">
-          <input class="modal-personal__field" type="text" id="login" placeholder="Логин">
-          <div class="modal-personal__caption modal-personal__caption--login">Логин</div>
-          <input class="modal-personal__field modal-personal__field--password" type="text" id="password" placeholder="Пароль">
-          <div class="modal-personal__caption modal-personal__caption--password" >Пароль</div>
-        </div>
-
-        <div class="modal-personal__settings">
-          <input class="modal-personal__field modal-personal__field--remember" type="checkbox" name="remember" id="remember">
-          <label class="modal-personal__caption modal-personal__caption--remember" for="remember">Запомните меня</label>
-          <a class="modal-personal__foggot" href="#">Я забыл пароль!</a>
-        </div>
-
-        <button class="btn btn--log-in" type="submit">Войти<span class="modal-personal__in-personal"> в личный кабинет</span></button>
-        <button class="btn btn--close" type="button">Закрыть</button>
-      </form>
-    </section>
-
-
-    <footer class="footer">
-      <section class="contacts">
-        <b class="contacts__title">Барбершоп Бородинский</b>
-        <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
-        <a class="btn btn--contacts" href="tel:+78125556666"><span class="contacts__tel">Тел.: </span>+7 (812) 555-66-66</a>
-      </section>
-
-      <section class="social">
-        <b class="social__title">Давайте дружить!</b>
-        <div class="social__icons">
-          <a class="social-btn social-btn--vk" href="#">VK</a>
-          <a class="social-btn social-btn--fb" href="#">Facebook</a>
-          <a class="social-btn social-btn--ig" href="#">Instagram</a>
-        </div>
-      </section>
-
-      <section class="copyright">
-        <p class="copyright__title">Разработано:</p>
-        <a class="btn btn--copyright" href="#">HTML Academy</a>
-      </section>
-    </footer>
-
-  </div>
 
   <script src="js/script.min.js"></script>
 </body>

@@ -36,198 +36,196 @@
     </symbol>
   </svg>
 
-  <div class="wrapper">
 
-    <header class="header header--inner-page">
-      <nav class="menu">
-        <div class="menu__toggle menu__toggle--closed">Открыть</div>
+  <header class="header header--inner-page">
+    <nav class="menu">
+      <div class="menu__toggle menu__toggle--closed">Открыть</div>
 
-        <div class="menu__wrapper menu__wrapper--closed">
-          <ul class="menu__list">
-            <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
-            <li class="menu__item"><a href="photo.html" class="menu__link"><span class="menu__item-our-works">Наши </span>работы</a></li>
-            <li class="menu__item menu__item--show"><a class="menu__link menu__link--active">Записаться</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a></li>
-          </ul>
+      <div class="menu__wrapper menu__wrapper--closed">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
+          <li class="menu__item"><a href="photo.html" class="menu__link"><span class="menu__item-our-works">Наши </span>работы</a></li>
+          <li class="menu__item menu__item--show"><a class="menu__link menu__link--active">Записаться</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a></li>
+        </ul>
 
-          <div class="menu__user">
-            <a href="#" class="menu__login">Вход</a>
-          </div>
+        <div class="menu__user">
+          <a href="#" class="menu__login">Вход</a>
         </div>
-      </nav>
-
-      <div class="logo logo--inner-page">
-        <a class="logo__link">
-          <svg class="logo__image"><use xlink:href="#logo"/></svg>
-        </a>
       </div>
+    </nav>
+
+    <div class="logo logo--inner-page">
+      <a class="logo__link">
+        <svg class="logo__image"><use xlink:href="#logo"/></svg>
+      </a>
+    </div>
+  </header>
+
+
+  <section class="order">
+    <header class="order__header"> <!-- TODO: может сделать общий блок? -->
+      <h1 class="order__title">Запись на стрижку</h1>
+      <a class="btn btn--to-main" href="index.html">На главную</a>
     </header>
 
-
-    <section class="order">
-      <header class="order__header"> <!-- TODO: может сделать общий блок? -->
-        <h1 class="order__title">Запись на стрижку</h1>
-        <a class="btn btn--to-main" href="index.html">На главную</a>
-      </header>
-
-      <form class="order-form" action="#" method="post">
-        <div class="order-form__contacts">
-          <div class="order-form__name">
-            <input class="order-form__field order-form__field--name" type="text" name="lastname" placeholder="Фамилия">
-            <input class="order-form__field order-form__field--name" type="text" name="name" placeholder="Имя">
-            <input class="order-form__field order-form__field--name" type="text" name="patronymic" placeholder="Отчество">
-          </div>
-          <div class="order-form__communications">
-            <input class="order-form__field order-form__field--communications" type="tel" name="phone" placeholder="Контактный телефон">
-            <input class="order-form__field order-form__field--communications" type="email" name="email" placeholder="Контактный e-mail">
-          </div>
-          <textarea class="order-form__for-master" name="for-master" placeholder="Доп. информация для мастера"></textarea>
+    <form class="order-form" action="#" method="post">
+      <div class="order-form__contacts">
+        <div class="order-form__name">
+          <input class="order-form__field order-form__field--name" type="text" name="lastname" placeholder="Фамилия">
+          <input class="order-form__field order-form__field--name" type="text" name="name" placeholder="Имя">
+          <input class="order-form__field order-form__field--name" type="text" name="patronymic" placeholder="Отчество">
         </div>
-
-        <div class="order-form__model">
-          <b class="order-form__title">Выберите модель бороды:</b>
-          <ul class="order-form__list order-form__list--model">
-            <li class="order-form__list-item order-form__list-item--model">
-              <input class="order-form__field order-form__field--model" type="radio" name="model" id="admiral" checked>
-              <label class="order-form__caption order-form__caption--model" for="admiral">адмирал</label>
-              <svg class="order-form__icon" width="52" height="49"><use xlink:href="#beard-1"/></svg>
-            </li>
-            <li class="order-form__list-item order-form__list-item--model">
-              <input class="order-form__field order-form__field--model" type="radio" name="model" id="woodman">
-              <label class="order-form__caption order-form__caption--model" for="woodman">лесоруб</label>
-              <svg class="order-form__icon" width="58" height="68"><use xlink:href="#beard-2"/></svg>
-            </li>
-            <li class="order-form__list-item order-form__list-item--model">
-              <input class="order-form__field order-form__field--model" type="radio" name="model" id="polar">
-              <label class="order-form__caption order-form__caption--model" for="polar">полярник</label>
-              <svg class="order-form__icon" width="63" height="78"><use xlink:href="#beard-3"/></svg>
-            </li>
-            <li class="order-form__list-item order-form__list-item--model">
-              <input class="order-form__field order-form__field--model" type="radio" name="model" id="boyar">
-              <label class="order-form__caption order-form__caption--model" for="boyar">боярин</label>
-              <svg class="order-form__icon" width="57" height="97"><use xlink:href="#beard-4"/></svg>
-            </li>
-            <li class="order-form__list-item order-form__list-item--model">
-              <input class="order-form__field order-form__field--model" type="radio" name="model" id="sage">
-              <label class="order-form__caption order-form__caption--model" for="sage">мудрец</label>
-              <svg class="order-form__icon" width="45" height="104"><use xlink:href="#beard-5"/></svg>
-            </li>
-          </ul>
+        <div class="order-form__communications">
+          <input class="order-form__field order-form__field--communications" type="tel" name="phone" placeholder="Контактный телефон">
+          <input class="order-form__field order-form__field--communications" type="email" name="email" placeholder="Контактный e-mail">
         </div>
-
-        <div class="order-form__additional">
-          <b class="order-form__title">Дополнительные услуги:</b>
-          <ul class="order-form__list order-form__list--additional">
-            <li class="order-form__list-item order-form__list-item--additional">
-              <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="paint-beard" checked>
-              <label class="order-form__caption order-form__caption--additional" for="paint-beard">Подкрасить бороду</label>
-            </li>
-            <li class="order-form__list-item order-form__list-item--additional">
-              <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="twirl-mustache" checked>
-              <label class="order-form__caption order-form__caption--additional" for="twirl-mustache">Накрутить усы</label>
-            </li>
-            <li class="order-form__list-item order-form__list-item--additional">
-              <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="comb-beard">
-              <label class="order-form__caption order-form__caption--additional" for="comb-beard">Причесать бороду</label>
-            </li>
-            <li class="order-form__list-item order-form__list-item--additional">
-              <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="align-temple">
-              <label class="order-form__caption order-form__caption--additional" for="align-temple">Подровнять виски</label>
-            </li>
-            <li class="order-form__list-item order-form__list-item--additional">
-              <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="remove-gray">
-              <label class="order-form__caption order-form__caption--additional" for="remove-gray">Убрать седину</label>
-            </li>
-            <li class="order-form__list-item order-form__list-item--additional">
-              <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="polished-bald">
-              <label class="order-form__caption order-form__caption--additional" for="polished-bald">Отполировать лысину</label>
-            </li>
-          </ul>
-        </div>
-
-        <button class="btn btn--submit" type="submit">Отправить заявку</button>
-      </form>
-
-      <div class="modal-form modal-form--fail">
-        <b class="modal-form__header">Неудача</b>
-        <p class="modal-form__text">Что-то пошло не так. Проверьте выделенные красным поля формы.</p>
-        <button class="btn">Ok</button>
+        <textarea class="order-form__for-master" name="for-master" placeholder="Доп. информация для мастера"></textarea>
       </div>
 
-      <div class="modal-form modal-form--success">
-        <b class="modal-form__header">Это успех!</b>
-        <p class="modal-form__text">Ваша заявка отправлена. Ожидайте, мы свяжемся с вами как только будет минутка.</p>
-        <button class="btn">Закрыть окно</button>
+      <div class="order-form__model">
+        <b class="order-form__title">Выберите модель бороды:</b>
+        <ul class="order-form__list order-form__list--model">
+          <li class="order-form__list-item order-form__list-item--model">
+            <input class="order-form__field order-form__field--model" type="radio" name="model" id="admiral" checked>
+            <label class="order-form__caption order-form__caption--model" for="admiral">адмирал</label>
+            <svg class="order-form__icon" width="52" height="49"><use xlink:href="#beard-1"/></svg>
+          </li>
+          <li class="order-form__list-item order-form__list-item--model">
+            <input class="order-form__field order-form__field--model" type="radio" name="model" id="woodman">
+            <label class="order-form__caption order-form__caption--model" for="woodman">лесоруб</label>
+            <svg class="order-form__icon" width="58" height="68"><use xlink:href="#beard-2"/></svg>
+          </li>
+          <li class="order-form__list-item order-form__list-item--model">
+            <input class="order-form__field order-form__field--model" type="radio" name="model" id="polar">
+            <label class="order-form__caption order-form__caption--model" for="polar">полярник</label>
+            <svg class="order-form__icon" width="63" height="78"><use xlink:href="#beard-3"/></svg>
+          </li>
+          <li class="order-form__list-item order-form__list-item--model">
+            <input class="order-form__field order-form__field--model" type="radio" name="model" id="boyar">
+            <label class="order-form__caption order-form__caption--model" for="boyar">боярин</label>
+            <svg class="order-form__icon" width="57" height="97"><use xlink:href="#beard-4"/></svg>
+          </li>
+          <li class="order-form__list-item order-form__list-item--model">
+            <input class="order-form__field order-form__field--model" type="radio" name="model" id="sage">
+            <label class="order-form__caption order-form__caption--model" for="sage">мудрец</label>
+            <svg class="order-form__icon" width="45" height="104"><use xlink:href="#beard-5"/></svg>
+          </li>
+        </ul>
+      </div>
+
+      <div class="order-form__additional">
+        <b class="order-form__title">Дополнительные услуги:</b>
+        <ul class="order-form__list order-form__list--additional">
+          <li class="order-form__list-item order-form__list-item--additional">
+            <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="paint-beard" checked>
+            <label class="order-form__caption order-form__caption--additional" for="paint-beard">Подкрасить бороду</label>
+          </li>
+          <li class="order-form__list-item order-form__list-item--additional">
+            <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="twirl-mustache" checked>
+            <label class="order-form__caption order-form__caption--additional" for="twirl-mustache">Накрутить усы</label>
+          </li>
+          <li class="order-form__list-item order-form__list-item--additional">
+            <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="comb-beard">
+            <label class="order-form__caption order-form__caption--additional" for="comb-beard">Причесать бороду</label>
+          </li>
+          <li class="order-form__list-item order-form__list-item--additional">
+            <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="align-temple">
+            <label class="order-form__caption order-form__caption--additional" for="align-temple">Подровнять виски</label>
+          </li>
+          <li class="order-form__list-item order-form__list-item--additional">
+            <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="remove-gray">
+            <label class="order-form__caption order-form__caption--additional" for="remove-gray">Убрать седину</label>
+          </li>
+          <li class="order-form__list-item order-form__list-item--additional">
+            <input class="order-form__field order-form__field--additional" type="checkbox" name="additional" id="polished-bald">
+            <label class="order-form__caption order-form__caption--additional" for="polished-bald">Отполировать лысину</label>
+          </li>
+        </ul>
+      </div>
+
+      <button class="btn btn--submit" type="submit">Отправить заявку</button>
+    </form>
+
+    <div class="modal-form modal-form--fail">
+      <b class="modal-form__header">Неудача</b>
+      <p class="modal-form__text">Что-то пошло не так. Проверьте выделенные красным поля формы.</p>
+      <button class="btn">Ok</button>
+    </div>
+
+    <div class="modal-form modal-form--success">
+      <b class="modal-form__header">Это успех!</b>
+      <p class="modal-form__text">Ваша заявка отправлена. Ожидайте, мы свяжемся с вами как только будет минутка.</p>
+      <button class="btn">Закрыть окно</button>
+    </div>
+  </section>
+
+
+  <section class="modal-personal">
+    <header class="modal-personal__header">
+      <b class="modal-personal__title">Личный кабинет</b>
+      <p class="modal-personal__text">Введите свой логин и пароль, чтобы войти</p>
+    </header>
+
+    <form class="modal-personal__form" action="#" method="post">
+      <div class="modal-personal__user">
+        <input class="modal-personal__field" type="text" id="login" placeholder="Логин">
+        <div class="modal-personal__caption modal-personal__caption--login">Логин</div>
+        <input class="modal-personal__field modal-personal__field--password" type="text" id="password" placeholder="Пароль">
+        <div class="modal-personal__caption modal-personal__caption--password" >Пароль</div>
+      </div>
+
+      <div class="modal-personal__settings">
+        <input class="modal-personal__field modal-personal__field--remember" type="checkbox" name="remember" id="remember">
+        <label class="modal-personal__caption modal-personal__caption--remember" for="remember">Запомните меня</label>
+        <a class="modal-personal__foggot" href="#">Я забыл пароль!</a>
+      </div>
+
+      <button class="btn btn--log-in" type="submit">Войти<span class="modal-personal__in-personal"> в личный кабинет</span></button>
+      <button class="btn btn--close" type="button">Закрыть</button>
+    </form>
+  </section>
+
+  <section class="modal-form modal-form--success">
+    <div class="modal-form__wrapper modal-form__wrapper--success">
+      <b class="modal-form__title">Это успех!</b>
+      <p class="modal-form__text modal-form__text--success">Ваша заявка отправлена.<br>Ожидайте, мы свяжемся с вами как только будет минутка.</p>
+      <button class="btn btn--modal-form btn--modal-form-success" type="button">Закрыть окно</button>
+    </div>
+  </section>
+
+  <section class="modal-form modal-form--failure">
+    <div class="modal-form__wrapper">
+      <b class="modal-form__title">Неудача</b>
+      <p class="modal-form__text modal-form__text--failure">Что-то пошло не так.<br>Проверьте выделенные красным поля формы.</p>
+      <button class="btn btn--modal-form btn--modal-form-failure" type="button">OK</button>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <section class="contacts">
+      <b class="contacts__title">Барбершоп Бородинский</b>
+      <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+      <a class="btn btn--contacts" href="tel:+78125556666"><span class="contacts__tel">Тел.: </span>+7 (812) 555-66-66</a>
+    </section>
+
+    <section class="social">
+      <b class="social__title">Давайте дружить!</b>
+      <div class="social__icons">
+        <a class="social-btn social-btn--vk" href="#">VK</a>
+        <a class="social-btn social-btn--fb" href="#">Facebook</a>
+        <a class="social-btn social-btn--ig" href="#">Instagram</a>
       </div>
     </section>
 
-
-    <section class="modal-personal">
-      <header class="modal-personal__header">
-        <b class="modal-personal__title">Личный кабинет</b>
-        <p class="modal-personal__text">Введите свой логин и пароль, чтобы войти</p>
-      </header>
-
-      <form class="modal-personal__form" action="#" method="post">
-        <div class="modal-personal__user">
-          <input class="modal-personal__field" type="text" id="login" placeholder="Логин">
-          <div class="modal-personal__caption modal-personal__caption--login">Логин</div>
-          <input class="modal-personal__field modal-personal__field--password" type="text" id="password" placeholder="Пароль">
-          <div class="modal-personal__caption modal-personal__caption--password" >Пароль</div>
-        </div>
-
-        <div class="modal-personal__settings">
-          <input class="modal-personal__field modal-personal__field--remember" type="checkbox" name="remember" id="remember">
-          <label class="modal-personal__caption modal-personal__caption--remember" for="remember">Запомните меня</label>
-          <a class="modal-personal__foggot" href="#">Я забыл пароль!</a>
-        </div>
-
-        <button class="btn btn--log-in" type="submit">Войти<span class="modal-personal__in-personal"> в личный кабинет</span></button>
-        <button class="btn btn--close" type="button">Закрыть</button>
-      </form>
+    <section class="copyright">
+      <p class="copyright__title">Разработано:</p>
+      <a class="btn btn--copyright" href="#">HTML Academy</a>
     </section>
+  </footer>
 
-    <section class="modal-form modal-form--success">
-      <div class="modal-form__wrapper modal-form__wrapper--success">
-        <b class="modal-form__title">Это успех!</b>
-        <p class="modal-form__text modal-form__text--success">Ваша заявка отправлена.<br>Ожидайте, мы свяжемся с вами как только будет минутка.</p>
-        <button class="btn btn--modal-form btn--modal-form-success" type="button">Закрыть окно</button>
-      </div>
-    </section>
-
-    <section class="modal-form modal-form--failure">
-      <div class="modal-form__wrapper">
-        <b class="modal-form__title">Неудача</b>
-        <p class="modal-form__text modal-form__text--failure">Что-то пошло не так.<br>Проверьте выделенные красным поля формы.</p>
-        <button class="btn btn--modal-form btn--modal-form-failure" type="button">OK</button>
-      </div>
-    </section>
-
-
-    <footer class="footer">
-      <section class="contacts">
-        <b class="contacts__title">Барбершоп Бородинский</b>
-        <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
-        <a class="btn btn--contacts" href="tel:+78125556666"><span class="contacts__tel">Тел.: </span>+7 (812) 555-66-66</a>
-      </section>
-
-      <section class="social">
-        <b class="social__title">Давайте дружить!</b>
-        <div class="social__icons">
-          <a class="social-btn social-btn--vk" href="#">VK</a>
-          <a class="social-btn social-btn--fb" href="#">Facebook</a>
-          <a class="social-btn social-btn--ig" href="#">Instagram</a>
-        </div>
-      </section>
-
-      <section class="copyright">
-        <p class="copyright__title">Разработано:</p>
-        <a class="btn btn--copyright" href="#">HTML Academy</a>
-      </section>
-    </footer>
-
-  </div>
 
   <script src="js/script.js"></script>
 </body>
