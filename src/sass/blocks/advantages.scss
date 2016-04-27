@@ -11,7 +11,7 @@
     align-items: center;
     color: $color-white;
     padding: 0 40px;
-    padding-bottom: 23px;
+    padding-bottom: 24px;
     padding-top: 212px;
     position: relative;
     text-align: center;
@@ -58,7 +58,7 @@
     @include title;
 
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   &__text {
@@ -102,6 +102,7 @@
     }
 
     &__item {
+      min-height: 105px;
       padding-bottom: 36px;
       padding-left: 159px;
       padding-right: 30px;

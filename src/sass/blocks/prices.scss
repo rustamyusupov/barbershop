@@ -4,7 +4,7 @@
   &__header {
     background-color: $bg-color-header;
     padding: 0 30px;
-    padding-bottom: 25px;
+    padding-bottom: 26px;
     padding-top: 27px;
     text-align: center;
   }
@@ -13,7 +13,7 @@
     @include title;
 
     display: block;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
     padding: 0 20px;
   }
 
