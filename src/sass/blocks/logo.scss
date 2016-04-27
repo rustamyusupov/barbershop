@@ -3,7 +3,7 @@
   order: -1;
   text-align: center;
 
-  &__moustache,
+  &__mustache,
   &__barbershop {
     opacity: 0;
     transition: opacity .3s
@@ -64,7 +64,7 @@
     background-position: center -72px;
     height: 648px;
 
-    &__moustache {
+    &__mustache {
       opacity: 1;
     }
 
