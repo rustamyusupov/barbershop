@@ -26,17 +26,15 @@
   }
 
   &__model {
-    text-align: center;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     width: 100%;
   }
 
   &__model &__title {
     margin-bottom: 50px;
-
     width: 100%;
   }
 
@@ -54,12 +52,10 @@
     color: $color-black;
     border: 1px solid $color-border-news;
     font-size: $font-size-base;
+    height: 50px;
     line-height: $line-height-medium;
     padding: 9px 18px;
     width: 100%;
-
-    // TODO: Почему для IE контент меньше 30?
-    height: 50px;
 
     &::placeholder {
       color: $color-black;
@@ -163,7 +159,6 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    //justify-content: space-between;
     margin: 0;
     padding: 0;
 
@@ -174,7 +169,6 @@
   }
 
   &__list-item {
-    align-items: space-between;
     display: flex;
     flex-direction: column;
 
@@ -280,11 +274,9 @@
     &__for-master,
     &__field {
       font-size: $font-size-large;
+      height: auto;
       line-height: $line-height-medium;
       padding: 19px 24px;
-
-      // TODO: Почему для IE контент меньше 30?
-      height: auto;
     }
 
     &__for-master {

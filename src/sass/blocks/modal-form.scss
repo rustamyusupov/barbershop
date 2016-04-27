@@ -4,8 +4,9 @@
   box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.75);
   display: none;
   height: 317px;
-  left: 0;
   position: absolute;
+  right: 50%;
+  transform: translateX(50%);
   width: 320px;
   z-index: 10;
 
@@ -45,9 +46,7 @@
 @media #{$break-medium} {
 
   .modal-form {
-    bottom: 359px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 420px;
 
     &--success {
       width: 460px;
@@ -71,7 +70,7 @@
 @media #{$break-large} {
 
   .modal-form {
-    bottom: 235px;
+    bottom: 305px;
   }
 
 }

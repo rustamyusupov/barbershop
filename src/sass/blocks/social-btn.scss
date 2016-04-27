@@ -17,9 +17,7 @@
     content: "";
     right: 50%;
     position: absolute;
-    // TODO: Почему не работает вертикальное выравнивание в IE?
-    //top: 50%;
-    transform: translate(50%); //, -50%);
+    transform: translate(50%);
   }
 
   &--vk::after {

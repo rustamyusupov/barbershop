@@ -3,9 +3,10 @@
   box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.75);
   display: none;
   height: 408px;
-  left: 0;
+  right: 50%;
   position: absolute;
-  top: 134px;
+  top: 135px;
+  transform: translateX(50%);
   width: 320px;
   z-index: 10;
 
@@ -50,14 +51,12 @@
     color: $color-black;
     border: 1px solid $color-border-news;
     font-size: $font-size-base;
+    height: 50px;
     line-height: $line-height-medium;
     margin-bottom: 6px;
     padding: 9px 18px;
     padding-right: 45px;
     width: 100%;
-
-    // TODO: Почему для IE контент меньше 30?
-    //height: 50px;
 
     &::placeholder {
       color: $color-black;
@@ -152,7 +151,6 @@
 
   .modal-personal {
     height: 502px;
-    left: 155px;
     top: 130px;
     width: 460px;
 
@@ -174,12 +172,10 @@
 
     &__field {
       font-size: $font-size-large;
+      height: 70px;
       margin-bottom: 6px;
       padding: 19px 23px;
       padding-right: 55px;
-
-      // TODO: проверить в IE
-      //height: 70px;
     }
 
     &__settings {
@@ -203,7 +199,6 @@
 @media #{$break-large} {
 
   .modal-personal {
-    left: 370px;
     top: 130px;
   }
 
