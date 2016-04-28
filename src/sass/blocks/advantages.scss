@@ -87,6 +87,10 @@
       background-color: $color-white;
     }
 
+    &__text {
+      min-height: 108px;
+    }
+
   }
 
 }
