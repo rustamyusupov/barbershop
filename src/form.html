@@ -73,12 +73,12 @@
     <form class="order-form" action="#" method="post">
       <div class="order-form__contacts">
         <div class="order-form__name">
-          <input class="order-form__field order-form__field--name" type="text" name="lastname" placeholder="Фамилия">
-          <input class="order-form__field order-form__field--name" type="text" name="name" placeholder="Имя">
+          <input class="order-form__field order-form__field--name" type="text" name="lastname" placeholder="Фамилия" required>
+          <input class="order-form__field order-form__field--name" type="text" name="name" placeholder="Имя" required>
           <input class="order-form__field order-form__field--name" type="text" name="patronymic" placeholder="Отчество">
         </div>
         <div class="order-form__communications">
-          <input class="order-form__field order-form__field--communications" type="tel" name="phone" placeholder="Контактный телефон">
+          <input class="order-form__field order-form__field--communications" type="tel" name="phone" placeholder="Контактный телефон" required>
           <input class="order-form__field order-form__field--communications" type="email" name="email" placeholder="Контактный e-mail">
         </div>
         <textarea class="order-form__for-master" name="for-master" placeholder="Доп. информация для мастера"></textarea>
@@ -158,9 +158,9 @@
 
     <form class="modal-personal__form" action="#" method="post">
       <div class="modal-personal__user">
-        <input class="modal-personal__field" type="text" id="login" placeholder="Логин">
+        <input class="modal-personal__field" type="text" id="login" placeholder="Логин" required>
         <div class="modal-personal__caption modal-personal__caption--login">Логин</div>
-        <input class="modal-personal__field modal-personal__field--password" type="text" id="password" placeholder="Пароль">
+        <input class="modal-personal__field modal-personal__field--password" type="password" id="password" placeholder="Пароль" required>
         <div class="modal-personal__caption modal-personal__caption--password" >Пароль</div>
       </div>
 
@@ -210,11 +210,10 @@
 
     <section class="copyright">
       <p class="copyright__title">Разработано:</p>
-      <a class="btn btn--copyright" href="#">HTML Academy</a>
+      <a class="btn btn--copyright" href="https://htmlacademy.ru/">HTML Academy</a>
     </section>
   </footer>
 
-
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>

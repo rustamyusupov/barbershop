@@ -1,6 +1,6 @@
 .modal-form {
   background-color: $color-white;
-  bottom: 530px;
+  bottom: 590px;
   box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.75);
   display: none;
   height: 317px;
@@ -46,7 +46,7 @@
 @media #{$break-medium} {
 
   .modal-form {
-    bottom: 420px;
+    bottom: 490px;
 
     &--success {
       width: 460px;
@@ -70,7 +70,7 @@
 @media #{$break-large} {
 
   .modal-form {
-    bottom: 305px;
+    bottom: 375px;
   }
 
 }

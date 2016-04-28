@@ -131,6 +131,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 64px;
+    padding-bottom: 11px;
     padding-top: 67px;
     position: relative;
 
@@ -146,12 +147,13 @@
       border: none;
       display: inline-block;
       margin: 0;
-      margin-bottom: 17px;
+
       margin-top: 31px;
       width: 50%;
     }
 
     &__link {
+      min-height: 108px;
       padding-right: 27px;
     }
 
