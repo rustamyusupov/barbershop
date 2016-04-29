@@ -113,7 +113,7 @@
 
     &::before {
       background-image: url("../img/sprite.png");
-      background-position: -10px -205px;
+      background-position: -10px -204px;
       background-repeat: no-repeat;
       content: "";
       height: 16px;
@@ -265,12 +265,11 @@
     &__login {
 
       &::before {
-          top: 29px;
+        top: 29px;
       }
 
-      // TODO: Почему не меняет цвет?
       &:hover::before {
-        color: $color-news-text-hover;
+        background-position: -10px -276px;
       }
 
     }
@@ -334,20 +333,21 @@
       &::before {
         left: 11px;
         top: 28px;
+        z-index: 15;
       }
 
       &:hover {
         background-color: $color-white;
         color: $color-black;
-
-        // TODO: Как изменить цвет?
-        &::before {
-          color: $color-menu-desktop-active;
-        }
       }
 
       &:active {
         color: $color-menu-desktop-active;
+
+        &::before {
+          opacity: 0.1;
+        }
+
       }
 
     }
