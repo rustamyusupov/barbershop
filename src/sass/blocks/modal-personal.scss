@@ -133,6 +133,17 @@
         width: 22px;
       }
 
+      &:hover::before,
+      .modal-personal__field--remember:checked + &:hover::after {
+        border-color: $color-button-bg-active;
+      }
+
+      .modal-personal__field--remember:checked + &:active::before,
+      .modal-personal__field--remember:checked + &:active::after {
+        background-color: $color-button-bg-active;
+        background-image: none;
+      }
+
     }
 
   }
