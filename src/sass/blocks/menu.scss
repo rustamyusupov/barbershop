@@ -272,6 +272,10 @@
         background-position: -10px -276px;
       }
 
+      &:active::before {
+        background-position: -10px -204px;
+      }
+
     }
 
   }
@@ -339,12 +343,18 @@
       &:hover {
         background-color: $color-white;
         color: $color-black;
+
+        &::before {
+          opacity: 0.3;
+        }
+
       }
 
       &:active {
         color: $color-menu-desktop-active;
 
         &::before {
+          background-position: -10px -276px;
           opacity: 0.1;
         }
 

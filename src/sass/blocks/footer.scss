@@ -16,3 +16,11 @@
   }
 
 }
+
+@media #{$break-large} {
+
+  .footer {
+    flex-wrap: nowrap;
+  }
+
+}

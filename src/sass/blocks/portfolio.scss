@@ -73,16 +73,13 @@
 
   &__item-photo {
     height: 176px;
-    width: 280px;
+    width: 100%;
   }
 
   &__item--month &__item-photo {
     height: 480px;
-  }
-
-  &__item--month &__item-description {
-    padding-top: 19px;
-    padding-bottom: 17px;
+    object-fit: cover;
+    object-position: right;
   }
 
   &__item-sub {
@@ -95,6 +92,11 @@
     padding-left: 23px;
     padding-right: 20px;
     padding-top: 23px;
+  }
+
+  &__item--month &__item-description {
+    padding-top: 19px;
+    padding-bottom: 17px;
   }
 
   &__item-name {
@@ -232,6 +234,20 @@
 
     }
 
+    picture {
+      min-width: 270px;
+    }
+
+    &__item-photo {
+      height: 294px;
+    }
+
+    &__item--month &__item-photo {
+      height: 480px;
+      max-width: none;
+      width: 42.2%;
+    }
+
     &__item-sub {
       border-left: none;
       border-top: 1px solid $color-border-news;
@@ -245,15 +261,7 @@
 
     &__item--month &__item-sub {
       padding-top: 24px;
-    }
-
-    &__item-photo {
-      height: 294px;
-      width: 270px;
-    }
-
-    &__item--month &__item-photo {
-      height: 480px;
+      width: 57.8%;
     }
 
     &__item-description {
@@ -266,11 +274,12 @@
     }
 
     &__item-feedback {
-      padding-right: 60px;
+      padding-right: 80px;
     }
 
     &__item--month &__item-feedback {
-      padding-right: 50px;
+      padding-right: 18%;
+      max-width: 300px;
     }
 
     &__item-services {
@@ -397,7 +406,7 @@
     }
 
     &__item--month &__item-photo {
-      width: 480px;
+      width: 50%;
     }
 
     &__item-sub {
@@ -406,7 +415,7 @@
       min-height: 216px;
       padding: 0;
       padding-top: 29px;
-      width: 100%;
+      width: 292px;
     }
 
     &__item--month &__item-sub {
@@ -414,7 +423,7 @@
       border-left: none;
       padding-left: 40px;
       padding-top: 128px;
-      width: 100%;
+      width: 50%;
     }
 
     &__item-description {
@@ -431,7 +440,7 @@
     }
 
     &__item--month &__item-feedback {
-      padding-right: 160px;
+      padding-right: 140px;
     }
 
     &__item-services {

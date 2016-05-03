@@ -2,7 +2,7 @@
   background-color: $bg-color-news;
   border-bottom: 1px solid $color-border-news;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   padding-bottom: 28px;
   padding-top: 42px;
@@ -127,7 +127,7 @@
 @media #{$break-medium} {
 
   .news  {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 64px;
@@ -147,7 +147,6 @@
       border: none;
       display: inline-block;
       margin: 0;
-
       margin-top: 31px;
       width: 50%;
     }
@@ -176,6 +175,7 @@
     }
 
     &__item {
+      border: none;
       margin-bottom: 21px;
       width: 33.3333%;
 

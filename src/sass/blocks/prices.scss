@@ -136,22 +136,22 @@
     }
 
     &__list {
+      display: block;
 
       tbody {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        /* width: 100%; */
       }
 
       tr {
         box-sizing: border-box;
         display: block;
-        flex: 0;
-        min-width: 50%;
         padding-bottom: 27px;
         padding-left: 34px;
         padding-right: 36px;
         padding-top: 25px;
+        width: 50%;
       }
 
     }

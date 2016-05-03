@@ -23,6 +23,12 @@
     color: $color-button-text-active;
   }
 
+  &--news {
+    margin: 0 auto;
+    padding: 12px 73px;
+    width: 280px;
+  }
+
   &--to-main {
     display: none;
   }
@@ -130,6 +136,7 @@
       position: absolute;
       right: 65px;
       top: 84px;
+      width: auto;
     }
 
     &--feedback {
