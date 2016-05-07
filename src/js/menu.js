@@ -25,6 +25,11 @@ function toggleMenu() {
 
 function showPersonal(event) {
   event.preventDefault();
-  toggleMenu();
+
+  btnBurger.classList.remove('menu__toggle--opened');
+  btnBurger.classList.add('menu__toggle--closed');
+  menu.classList.remove('menu__wrapper--opened');
+  menu.classList.add('menu__wrapper--closed');
+
   mfPersonal.classList.add('modal-personal--show');
 }
