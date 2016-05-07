@@ -71,15 +71,21 @@
 
   }
 
+  picture {
+    min-width: 280px;
+  }
+
   &__item-photo {
     height: 176px;
-    width: 100%;
   }
 
   &__item--month &__item-photo {
+    background-image: url("../img/photo-1-desktop.jpg");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    font-size: 0;
     height: 480px;
-    object-fit: cover;
-    object-position: right;
+    width: 100%;
   }
 
   &__item-sub {
@@ -240,11 +246,11 @@
 
     &__item-photo {
       height: 294px;
+      width: 270px;
     }
 
     &__item--month &__item-photo {
       height: 480px;
-      max-width: none;
       width: 42.2%;
     }
 
